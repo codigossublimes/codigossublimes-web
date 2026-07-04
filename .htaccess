@@ -1,0 +1,45 @@
+# ============================================================
+# ARQUITECTURA DE LA PERCEPCIÓN™ — .htaccess para Apache
+# ============================================================
+
+# --- 1. REDIRECT WWW → NON-WWW ---
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# --- 2. HTTPS REDIRECT ---
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# --- 3. COMPRESIÓN GZIP ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# --- 4. CACHE HEADERS PARA ASSETS ESTÁTICOS ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|png|jpg|jpeg|svg|ico|woff2)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# --- 5. PÁGINA POR DEFECTO ---
+DirectoryIndex index.html
+
+# --- 6. PROTEGER .htaccess ---
+<Files ".htaccess">
+  Order allow,deny
+  Deny from all
+</Files>
