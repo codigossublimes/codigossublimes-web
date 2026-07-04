@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inversión — Arquitectura de la Percepción™</title>
+  <meta name="description" content="Elige tu nivel de participación en el sistema. App, servicios presenciales, programas corporativos e inversión estratégica." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/inversion.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body data-theme="cosmos">
+
+  <canvas id="quantum-canvas"></canvas>
+
+  <svg class="sacred-geometry" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <radialGradient id="goldFade" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.18" />
+        <stop offset="70%" stop-color="#D4AF37" stop-opacity="0.05" />
+        <stop offset="100%" stop-color="#D4AF37" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <g stroke="url(#goldFade)" fill="none" stroke-width="1">
+      <circle cx="300" cy="300" r="80" /><circle cx="300" cy="220" r="80" /><circle cx="300" cy="380" r="80" />
+      <circle cx="231" cy="260" r="80" /><circle cx="369" cy="260" r="80" /><circle cx="231" cy="340" r="80" /><circle cx="369" cy="340" r="80" />
+      <circle cx="300" cy="300" r="160" /><circle cx="300" cy="300" r="240" />
+    </g>
+  </svg>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema visual">
+    <svg class="icon-cosmos" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+    <svg class="icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
+  </button>
+
+  <!-- =================== NAVBAR =================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Arquitectura de la Percepción<span class="tm">™</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+          <li><a href="./sistema.html">Sistema</a></li>
+          <li><a href="./app.html">App</a></li>
+          <li><a href="#">Inversión</a></li>
+          <li><a href="./jose-y-mar.html">Equipo</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a href="../index.html#contacto" class="btn-nav-special">Descubre tu Código</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =================== HERO =================== -->
+  <header class="inversion-hero" id="hero">
+    <div id="particles-js" class="particles-bg"></div>
+    <div class="inversion-hero-content">
+      <span class="inversion-hero-badge anim-fade-up anim-delay-1">INVERSIÓN</span>
+      <h1 class="anim-fade-up anim-delay-1">Elige Tu Nivel de Participación<br />en el Sistema.</h1>
+      <p class="inversion-hero-subtitle anim-fade-up anim-delay-2">Cada inversión es una puerta de acceso diferente — todas llevan al mismo campo.</p>
+    </div>
+  </header>
+
+  <!-- =================== SECCIÓN 1: INTRO =================== -->
+  <section class="intro" id="intro">
+    <div class="intro-container">
+      <p data-aos="fade-up">Arquitectura de Percepción es un proyecto autogestivo que financia su propia investigación y expansión. Cada inversión contribuye directamente a que el conocimiento de 20 años siga llegando a más personas, comunidades y territorios — y a que la abundancia que genera fluya en múltiples direcciones simultáneamente.</p>
+      <div class="intro-caja" data-aos="fade-up" data-aos-delay="100">
+        <p>Este no es un modelo de extracción. Es un modelo de expansión — donde quien invierte participa activamente en la creación de una nueva arquitectura global de percepción.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 2: PLANES APP =================== -->
+  <section class="app-plans" id="app-plans">
+    <div class="app-plans-container">
+      <h2 class="section-title" data-aos="fade-up">App Códigos Sublimes</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Acceso al sistema en tu práctica cotidiana</p>
+
+      <div class="plans-wrapper">
+        <div class="tabs-wrapper" data-aos="fade-up" data-aos-delay="200">
+          <button class="tab active plan-tab" data-plan="calendario">Calendario Cósmico</button>
+          <button class="tab plan-tab" data-plan="calculadora">Calculadora de Percepción</button>
+        </div>
+
+        <!-- Tab 1: Calendario Cósmico -->
+        <div class="tab-content plan-content active" id="plan-calendario">
+          <div class="pricing-grid pricing-3">
+            <div class="pricing-card" data-aos="fade-up">
+              <div class="pricing-header pricing-header-blue">ELEMENTAL</div>
+              <div class="pricing-price"><span class="price-monthly">$10 USD<span class="price-period">/mes</span></span></div>
+              <div class="pricing-yearly">$99 USD/año <span class="save-badge">Ahorra 17%</span></div>
+              <ul class="pricing-features">
+                <li class="yes">Información elemental del código de cada día</li>
+                <li class="yes">Color y elemento dominante</li>
+                <li class="yes">Tip diario de consciencia</li>
+                <li class="no">Guía completa de propósito</li>
+                <li class="no">Salud, amor y abundancia</li>
+                <li class="no">Calculadora personal</li>
+              </ul>
+              <a href="../index.html#contacto" class="btn-ghost-gold btn-block">Comenzar</a>
+            </div>
+            <div class="pricing-card pricing-card-featured" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-header pricing-header-gold">INSPIRACIÓN <span class="pop-badge">Más Popular</span></div>
+              <div class="pricing-price"><span class="price-monthly">$15 USD<span class="price-period">/mes</span></span></div>
+              <div class="pricing-yearly">$125 USD/año <span class="save-badge">Ahorra 31%</span></div>
+              <ul class="pricing-features">
+                <li class="yes">30 días: 30 créditos (1 crédito = 1 día del calendario)</li>
+                <li class="yes">Anual: acceso completo a las 365 casillas</li>
+                <li class="yes">Propósito, emociones, pensamientos y actividades del día</li>
+                <li class="yes">Tip de rejuvenecimiento diario</li>
+                <li class="yes">Abundancia y amor por código del día</li>
+                <li class="no">Guía completa (salud profunda, sexualidad, territorios)</li>
+                <li class="no">Calculadora personal</li>
+              </ul>
+              <a href="../index.html#contacto" class="btn btn-primary btn-block">Elegir Inspiración</a>
+            </div>
+            <div class="pricing-card pricing-card-recommended" data-aos="fade-up" data-aos-delay="200">
+              <div class="pricing-header pricing-header-deep">SUBLIME <span class="pop-badge">Recomendado</span></div>
+              <div class="pricing-price"><span class="price-monthly">$220 USD<span class="price-period">/mes</span></span></div>
+              <div class="pricing-yearly">$2,500 USD/año <span class="save-badge">Taller personalizado incluido</span></div>
+              <ul class="pricing-features">
+                <li class="yes">30 días: 30 créditos calendario + Calculadora desbloqueada</li>
+                <li class="yes">Anual: 365 créditos + Calculadora completa</li>
+                <li class="yes">Guía diaria COMPLETA (todos los campos)</li>
+                <li class="yes">Salud profunda, amor, sexualidad sagrada, territorios</li>
+                <li class="yes">Plantas, minerales, metales y recetas por código</li>
+                <li class="yes">Calculadora de Percepción Personal incluida</li>
+                <li class="yes">Taller personalizado (plan anual)</li>
+              </ul>
+              <a href="../index.html#contacto" class="btn btn-primary btn-block">Elegir Sublime</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Calculadora de Percepción -->
+        <div class="tab-content plan-content" id="plan-calculadora">
+          <div class="pricing-grid pricing-4">
+            <div class="pricing-card" data-aos="fade-up">
+              <div class="pricing-header pricing-header-blue">EXPLORADOR</div>
+              <div class="pricing-price"><span class="price-monthly">$10 USD</span></div>
+              <div class="pricing-subtext">1 consulta</div>
+              <div class="pricing-validity">Válido por: 30 días</div>
+              <ul class="pricing-features">
+                <li class="yes">1 cálculo de código completo</li>
+                <li class="yes">Perfil perceptual básico</li>
+                <li class="yes">Descarga de resultados</li>
+              </ul>
+              <a href="../index.html#contacto" class="btn-ghost-gold btn-block">Comenzar</a>
+            </div>
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-header pricing-header-blue">BUSCADOR <span class="save-badge">20% off</span></div>
+              <div class="pricing-price"><span class="price-monthly">$80 USD</span></div>
+              <div class="pricing-subtext">10 consultas</div>
+              <div class="pricing-validity">Válido por: 30 días</div>
+              <ul class="pricing-features">
+                <li class="yes">10 cálculos de código</li>
+                <li class="yes">Perfil perceptual completo</li>
+                <li class="yes">Uso personal y profesional</li>
+                <li class="yes">Historial de consultas</li>
+              </ul>
+              <a href="../index.html#contacto" class="btn-ghost-gold btn-block">Elegir Buscador</a>
+            </div>
+            <div class="pricing-card pricing-card-featured" data-aos="fade-up" data-aos-delay="200">
+              <div class="pricing-header pricing-header-gold">INICIADO <span class="pop-badge">Popular</span></div>
+              <div class="pricing-price"><span class="price-monthly">$670 USD</span> <span class="save-badge">33% off</span></div>
+              <div class="pricing-subtext">100 consultas</div>
+              <div class="pricing-validity">Válido por: 3 meses</div>
+              <ul class="pricing-features">
+                <li class="yes">100 cálculos de código</li>
+                <li class="yes">Uso profesional y equipos</li>
+                <li class="yes">Todos los campos del perfil</li>
+                <li class="yes">Historial completo</li>
+                <li class="yes">Soporte prioritario</li>
+              </ul>
+              <a href="../index.html#contacto" class="btn btn-primary btn-block">Elegir Iniciado</a>
+            </div>
+            <div class="pricing-card pricing-card-recommended" data-aos="fade-up" data-aos-delay="300">
+              <div class="pricing-header pricing-header-deep">MAESTRO <span class="pop-badge">Recomendado</span></div>
+              <div class="pricing-price"><span class="price-monthly">$5,600 USD</span> <span class="save-badge">44% off</span></div>
+              <div class="pricing-subtext">1,000 consultas</div>
+              <div class="pricing-validity">Válido por: 1 año</div>
+              <ul class="pricing-features">
+                <li class="yes">1,000 cálculos de código</li>
+                <li class="yes">Uso empresarial e institucional</li>
+                <li class="yes">Todos los campos del perfil</li>
+                <li class="yes">Territorios, alianzas y vocación</li>
+                <li class="yes">Historial ilimitado</li>
+                <li class="yes">Soporte dedicado</li>
+                <li class="yes">Formación en interpretación</li>
+              </ul>
+              <a href="../index.html#contacto" class="btn btn-primary btn-block">Elegir Maestro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 3: SERVICIOS PRESENCIALES =================== -->
+  <section class="servicios" id="servicios">
+    <div class="servicios-container">
+      <h2 data-aos="fade-up">Servicios y Experiencias</h2>
+      <div class="servicios-grid">
+        <!-- Card 1: Sesión Individual -->
+        <div class="servicio-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="servicio-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="14" r="6"/><path d="M8 34 Q8 24 20 24 Q32 24 32 34"/></svg></div>
+          <h3>SESIÓN INDIVIDUAL</h3>
+          <div class="servicio-precio">Desde $80 USD</div>
+          <p>El espacio de mayor profundidad para conocer tu Código específico y recibir orientación personalizada sobre cómo habitarlo en el contexto concreto de tu vida. Virtual o presencial.</p>
+          <ul class="servicio-lista">
+            <li>Lectura completa de tu Código</li>
+            <li>Orientación en las 8 dimensiones</li>
+            <li>Grabación de la sesión</li>
+            <li>Material de seguimiento</li>
+            <li>Posibilidades de continuidad</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn-ghost-gold">Agendar</a>
+        </div>
+        <!-- Card 2: Retiro (destacada) -->
+        <div class="servicio-card servicio-destacada" data-aos="fade-up" data-aos-delay="100">
+          <div class="servicio-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M4 32 L14 14 L22 24 L28 16 L36 32 Z"/></svg></div>
+          <h3>RETIRO TERAPÉUTICO</h3>
+          <div class="servicio-precio">Entre $250 y $620 USD</div>
+          <div class="servicio-subprecio">(Entre $1,000,000 y $2,500,000 COP según duración)</div>
+          <p>Experiencia inmersiva donde el sistema se habita colectivamente en territorios de alta resonancia. Programación diseñada específicamente para los códigos de los días del retiro.</p>
+          <ul class="servicio-lista">
+            <li>Gastronomía ancestral gourmet</li>
+            <li>Terapias escénicas con música en vivo</li>
+            <li>Noche con el maestro fuego</li>
+            <li>Clase magistral de pensamiento cuántico</li>
+            <li>Práctica de sexualidad sagrada</li>
+            <li>Obra pictográfica personalizada impresa y enmarcada</li>
+            <li>Regalos y beneficios de continuidad</li>
+            <li>Acceso a plan de acompañamiento</li>
+          </ul>
+          <a href="./retiros.html" class="btn btn-primary">Consultar fechas</a>
+        </div>
+        <!-- Card 3: Diplomado -->
+        <div class="servicio-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="servicio-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="10" width="24" height="18" rx="1"/><line x1="8" y1="16" x2="32" y2="16"/><circle cx="20" cy="22" r="3"/><line x1="16" y1="28" x2="16" y2="34"/><line x1="24" y1="28" x2="24" y2="34"/></svg></div>
+          <h3>DIPLOMADO</h3>
+          <div class="servicio-precio">Consultar — 9 meses</div>
+          <p>Formación profunda para dominar el sistema completo y llevarlo a tu campo profesional. Online, presencial o híbrido.</p>
+          <ul class="servicio-lista">
+            <li>Todos los Códigos y Fuerzas</li>
+            <li>Todos los cuadrantes y combinaciones</li>
+            <li>Principios de sublimación terapéutica</li>
+            <li>Práctica supervisada</li>
+            <li>Certificación como facilitador</li>
+            <li>Acceso permanente a actualizaciones</li>
+            <li>Comunidad de egresados</li>
+          </ul>
+          <a href="./diplomado.html" class="btn-ghost-gold">Solicitar información</a>
+        </div>
+        <!-- Card 4: Concierto -->
+        <div class="servicio-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="servicio-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M4 20 Q4 12 12 12 Q12 20 12 28"/><path d="M16 16 Q16 10 22 10 Q22 18 22 24"/><path d="M26 14 Q26 8 32 8 Q32 16 32 22"/><line x1="4" y1="28" x2="32" y2="22"/></svg></div>
+          <h3>CONCIERTO Y EXPERIENCIAS</h3>
+          <div class="servicio-precio">Consultar</div>
+          <p>La arquitectura sonora del sistema en experiencias colectivas de alta vibración — para grupos, empresas, comunidades y territorios.</p>
+          <ul class="servicio-lista">
+            <li>Música en vivo con Instrumentos Joya</li>
+            <li>Performance y movimiento</li>
+            <li>Experiencia de campo colectivo</li>
+            <li>Adaptable a cualquier contexto</li>
+            <li>Versiones para eventos corporativos</li>
+            <li>Versiones para comunidades</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn-ghost-gold">Consultar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 4: PLANES CORPORATIVOS =================== -->
+  <section class="corporativo" id="corporativo">
+    <div class="corporativo-container">
+      <h2 data-aos="fade-up">Para Organizaciones y Territorios</h2>
+      <p class="corporativo-subtitle" data-aos="fade-up" data-aos-delay="100">Cuando el sistema se despliega en un campo colectivo, el impacto es exponencial.</p>
+      <div class="corporativo-grid">
+        <div class="corporativo-card" data-aos="fade-up" data-aos-delay="0">
+          <h3>PROGRAMA ORGANIZACIONAL</h3>
+          <div class="corporativo-sub">Empresas y equipos</div>
+          <div class="corporativo-precio">Desde $3,500 USD</div>
+          <ul class="corporativo-lista">
+            <li>Diagnóstico perceptual del equipo</li>
+            <li>App Corporativa multi-usuario</li>
+            <li>Workshop de implementación 2 días</li>
+            <li>Dashboard organizacional de códigos</li>
+            <li>Seguimiento trimestral con métricas</li>
+            <li>Formación de facilitador interno</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn-ghost-gold">Solicitar propuesta</a>
+        </div>
+        <div class="corporativo-card corporativo-destacada" data-aos="fade-up" data-aos-delay="100">
+          <h3>PROGRAMA TERRITORIAL</h3>
+          <div class="corporativo-sub">Municipios · Universidades · Ministerios · Destinos turísticos</div>
+          <div class="corporativo-precio">Desde $15,000 USD</div>
+          <ul class="corporativo-lista">
+            <li>Diagnóstico territorial completo</li>
+            <li>Estrategia de posicionamiento</li>
+            <li>Programa piloto con cohortes</li>
+            <li>Dashboard institucional predictivo</li>
+            <li>Festival o evento inaugural</li>
+            <li>Alianza estratégica de largo plazo</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn btn-primary">Hablar con el equipo</a>
+        </div>
+        <div class="corporativo-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>COLECCIÓN PICTOGRÁFICA</h3>
+          <div class="corporativo-sub">Obra plástica original</div>
+          <div class="corporativo-precio">Consultar disponibilidad</div>
+          <ul class="corporativo-lista">
+            <li>33 pictogramas disponibles</li>
+            <li>Formato digital o físico</li>
+            <li>Impresión de alta calidad</li>
+            <li>Enmarcado profesional</li>
+            <li>Obra personalizada por Código</li>
+            <li>Para coleccionistas e instituciones</li>
+          </ul>
+          <a href="./coleccion.html" class="btn-ghost-gold">Ver colección</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 5: INVERSIÓN ESTRATÉGICA =================== -->
+  <section class="estrategica" id="estrategica">
+    <div class="estrategica-container">
+      <span class="estrategica-badge" data-aos="fade-up">INVERSIÓN ESTRATÉGICA MAYOR</span>
+      <h2 data-aos="fade-up" data-aos-delay="100">Para Quienes Quieren Participar<br />en la Nueva Arquitectura Global</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Estos niveles de inversión no son solo acceso al sistema — son participación activa en la expansión de una nueva infraestructura de percepción que está comenzando a escalar globalmente.</p>
+
+      <div class="estrategica-timeline">
+        <div class="estrategica-card" data-aos="fade-up" data-aos-delay="0">
+          <h3>TRANSFORMADOR</h3>
+          <div class="estrategica-precio">$15,000 USD</div>
+          <div class="estrategica-sub">5,000 consultas · 1 año</div>
+          <ul class="estrategica-lista">
+            <li>App Calculadora + Calendario completo</li>
+            <li>Dashboard organizacional</li>
+            <li>Sesión estratégica de implementación</li>
+            <li>Soporte prioritario</li>
+            <li>Participación en expansión regional</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn-ghost-gold">Consultar</a>
+        </div>
+        <div class="estrategica-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>WHITE LABEL</h3>
+          <div class="estrategica-precio">$1,000,000 USD</div>
+          <div class="estrategica-sub">400,000 consultas · 2 años</div>
+          <ul class="estrategica-lista">
+            <li>App personalizada con tu marca</li>
+            <li>Calendario + Calculadora completos</li>
+            <li>Consultoría de integración</li>
+            <li>Formación de tu equipo facilitador</li>
+            <li>Participación en expansión global</li>
+            <li>Derechos de distribución en territorio</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn-ghost-gold">Solicitar deck privado</a>
+        </div>
+        <div class="estrategica-card estrategica-divinidad" data-aos="fade-up" data-aos-delay="200">
+          <span class="estrategica-nivel">NIVEL MÁS ALTO</span>
+          <h3>DIVINIDAD</h3>
+          <div class="estrategica-precio">Inversión estratégica</div>
+          <div class="estrategica-sub">Participación en el ecosistema completo</div>
+          <ul class="estrategica-lista">
+            <li>500 millones de consultas</li>
+            <li>Obra creativa completa del sistema</li>
+            <li>Diplomado completo en Arquitectura de Percepción</li>
+            <li>Todos los servicios de elevación</li>
+            <li>Posición en la expansión global</li>
+            <li>Co-creación de nuevos verticales</li>
+            <li>Retorno proyectado 3-5x en 7-12 años</li>
+            <li>Acceso vitalicio al ecosistema</li>
+          </ul>
+          <a href="../index.html#contacto" class="btn btn-primary">Solicitar Información Confidencial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 6: ECONOMÍA CUÁNTICA =================== -->
+  <section class="economia-cuantica" id="economia">
+    <div class="economia-container">
+      <span class="economia-badge" data-aos="fade-up">VALOR ÚNICO DEL SISTEMA</span>
+      <h2 class="economia-title" data-aos="fade-up" data-aos-delay="100">La Única Moneda de Intercambio<br />que No Aceptamos es el Límite.</h2>
+      <p class="economia-subtitle" data-aos="fade-up" data-aos-delay="200">Todos nuestros servicios tienen posibilidades cuánticas de financiación.</p>
+      <p class="economia-text" data-aos="fade-up" data-aos-delay="300">Arquitectura de Percepción es un sistema que opera desde el campo de las posibilidades infinitas — y eso incluye la manera en que se accede a él. El papel moneda es una forma de intercambio, no la única. Si el campo te convoca y los recursos convencionales no están disponibles en este momento, existe un camino.</p>
+      <div class="economia-grid">
+        <div class="economia-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="economia-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+          <h3 class="economia-card-title">TRUEQUE Y ESPECIE</h3>
+          <p class="economia-card-text">Servicios, productos, conocimientos, habilidades. Si tienes algo de valor que ofrecer, podemos conversarlo.</p>
+        </div>
+        <div class="economia-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="economia-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="7" y1="7" x2="10" y2="10"/><line x1="17" y1="7" x2="14" y2="10"/><line x1="7" y1="17" x2="10" y2="14"/><line x1="17" y1="17" x2="14" y2="14"/></svg></div>
+          <h3 class="economia-card-title">ALIANZAS Y COPRODUCCIÓN</h3>
+          <p class="economia-card-text">Si tu proyecto o red puede potenciar el sistema, exploramos formas de colaboración que generen valor para ambos campos.</p>
+        </div>
+        <div class="economia-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="economia-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="8" x2="6" y2="12"/><line x1="12" y1="8" x2="18" y2="12"/><line x1="6" y1="12" x2="6" y2="16"/><line x1="18" y1="12" x2="18" y2="16"/><line x1="6" y1="16" x2="3" y2="20"/><line x1="6" y1="16" x2="9" y2="20"/><line x1="18" y1="16" x2="15" y2="20"/><line x1="18" y1="16" x2="21" y2="20"/></svg></div>
+          <h3 class="economia-card-title">MODELOS HÍBRIDOS</h3>
+          <p class="economia-card-text">Combinaciones de recursos, pagos parciales, intercambios mixtos. La forma exacta la definimos juntos según las posibilidades reales del campo.</p>
+        </div>
+      </div>
+      <div class="economia-highlight" data-aos="fade-up" data-aos-delay="100">
+        <p>Si el sistema te llama y los recursos convencionales no están disponibles, escríbenos. Siempre hay un camino cuando el campo es genuino.</p>
+      </div>
+      <a href="../index.html#contacto" class="btn btn-primary economia-btn" data-aos="fade-up" data-aos-delay="200">Conversemos las Posibilidades</a>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 7: CTA FINAL =================== -->
+  <section class="cta-final" id="cta-final">
+    <div class="cta-final-container">
+      <h2 data-aos="fade-up">El Campo Ya Tiene un Lugar para Ti.</h2>
+      <p data-aos="fade-up" data-aos-delay="100">No importa desde dónde llegues ni con qué recursos. El sistema tiene una puerta para cada campo. El primer paso es siempre una conversación.</p>
+      <div class="cta-final-buttons" data-aos="fade-up" data-aos-delay="200">
+        <a href="./app.html" class="btn btn-primary">Descubre tu Código</a>
+        <a href="../index.html#contacto" class="btn-ghost-gold">Escríbenos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Arquitectura de la Percepción<span class="tm">™</span></div>
+          <p class="footer-tagline">Un sistema vivo para habitar la realidad desde su mayor inteligencia disponible.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            <a href="#" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+            <li><a href="./app.html">App</a></li>
+            <li><a href="./inversion.html">Planes</a></li>
+            <li><a href="./retiros.html">Retiros</a></li>
+            <li><a href="./diplomado.html">Diplomado</a></li>
+            <li><a href="./coleccion.html">Colección</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-cta-col">
+          <h4 class="footer-col-title">Comienza Ahora</h4>
+          <a href="../index.html#contacto" class="btn btn-primary">Descubre tu Código</a>
+          <p class="footer-cta-text">20 años de investigación respaldando cada código</p>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">© 2026 Arquitectura de Percepción · Experiencias Sublimes Internacional · www.codigossublimes.com</p>
+    </div>
+  </footer>
+
+  <script src="../js/quantum-bg.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    if (window.particlesJS) {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 30, density: { enable: true, value_area: 900 } },
+          color: { value: '#D4AF37' },
+          opacity: { value: 0.3, random: true },
+          size: { value: 2, random: true },
+          line_linked: { enable: true, distance: 130, color: '#D4AF37', opacity: 0.15, width: 1 },
+          move: { enable: true, speed: 0.6, direction: 'none', random: true, out_mode: 'out' }
+        },
+        interactivity: { detect_on: 'canvas', events: { onhover: { enable: false }, onclick: { enable: false } } },
+        retina_detect: true
+      });
+    }
+    if (window.AOS) { AOS.init({ duration: 900, once: true, offset: 60 }); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>José & Maryory — Arquitectura de la Percepción™</title>
+  <meta name="description" content="Una pareja intercultural México-Colombia. 20 años de laboratorio vivo de cuántica aplicada." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/equipo.css" />
+  <link rel="stylesheet" href="../css/trayectoria.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body data-theme="cosmos">
+
+  <canvas id="quantum-canvas"></canvas>
+
+  <svg class="sacred-geometry" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <radialGradient id="goldFade" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.18" />
+        <stop offset="70%" stop-color="#D4AF37" stop-opacity="0.05" />
+        <stop offset="100%" stop-color="#D4AF37" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <g stroke="url(#goldFade)" fill="none" stroke-width="1">
+      <circle cx="300" cy="300" r="80" />
+      <circle cx="300" cy="220" r="80" />
+      <circle cx="300" cy="380" r="80" />
+      <circle cx="231" cy="260" r="80" />
+      <circle cx="369" cy="260" r="80" />
+      <circle cx="231" cy="340" r="80" />
+      <circle cx="369" cy="340" r="80" />
+      <circle cx="300" cy="300" r="160" />
+      <circle cx="300" cy="300" r="240" />
+    </g>
+  </svg>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema visual">
+    <svg class="icon-cosmos" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+    <svg class="icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  </button>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        Arquitectura de la Percepción<span class="tm">™</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+          <li><a href="../index.html#app">App</a></li>
+          <li><a href="../index.html#inversion">Inversión</a></li>
+          <li><a href="../index.html#trayectoria">Nosotros</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a href="../index.html#contacto" class="btn-nav-special">Descubre tu Código</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =================== HERO =================== -->
+  <header class="equipo-hero" id="hero">
+    <div id="particles-js" class="particles-bg"></div>
+    <div class="equipo-hero-content">
+      <span class="equipo-hero-badge" data-aos="fade-up">EL EQUIPO</span>
+      <h1 data-aos="fade-up" data-aos-delay="100">
+        José &amp; Maryory.<br />
+        Astronautas de lo Sublime.
+      </h1>
+      <p class="equipo-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+        Una pareja intercultural México-Colombia. 20 años de laboratorio vivo de cuántica aplicada.
+      </p>
+    </div>
+  </header>
+
+  <!-- =================== SECCIÓN 1: LA HISTORIA =================== -->
+  <section class="historia" id="historia">
+    <div class="historia-container">
+      <h2 data-aos="fade-up">Dos Preguntas que Encontraron la Misma Respuesta</h2>
+
+      <div class="historia-text">
+        <p data-aos="fade-up" data-aos-delay="100">
+          México, 2004. Un investigador científico y director escénico llamado José Luis Pineda Servín estrena en Morelia su primera obra sobre Prevención de violencia y secuestros. Tiene veinte y tantos años y lleva consigo una pregunta que no lo suelta: ¿Cómo podemos trascender el dolor y el sufrimiento? ¿Cuáles son los mejores medios para transformarlo?
+        </p>
+        <p data-aos="fade-up" data-aos-delay="200">
+          Colombia, mismo año. Una estudiante de Planeación del Desarrollo Social llamada Maryory Montoya trabaja con comunidades en Medellín y lleva su propia pregunta: ¿El arte sana o solo abre heridas? ¿Puede el bienestar ser planificado desde adentro, qué hay después de la violencia?
+        </p>
+        <p data-aos="fade-up" data-aos-delay="300">
+          No lo saben todavía, pero sus campos de investigación ya están operando en la misma frecuencia. Solo falta que el sistema los ponga en la misma órbita. Eso ocurrió en Ecuador, 2011— y desde entonces el laboratorio no se ha detenido.
+        </p>
+      </div>
+
+      <div class="historia-divider" data-aos="fade-up" data-aos-delay="400"></div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 2: PERFILES =================== -->
+  <section class="perfiles" id="perfiles">
+    <div class="perfiles-container">
+      <div class="perfiles-grid">
+        <!-- JOSÉ -->
+        <div class="perfil-card" data-aos="fade-up">
+          <div class="perfil-avatar">J</div>
+          <h2 class="perfil-name">José Luis Pineda Servín</h2>
+          <p class="perfil-role">Científico-Artista Transdisciplinario<br />Creador de Arquitectura de la Percepción™</p>
+
+          <h4 class="perfil-section-label">Formación</h4>
+          <ul class="perfil-formacion">
+            <li>· Licenciatura en Música — EPBA, UMSNH</li>
+            <li>· Licenciatura en Teatro — EPBA, UMSNH</li>
+            <li>· Diplomado Internacional de Dramaturgia y Ciencia — INBA/SECREA</li>
+            <li>· Diplomado Cine y Educación (150hrs) — Conservatorio de las Rosas</li>
+            <li>· Diplomado Repensar las Violencias desde el Arte — UMSNH</li>
+            <li>· Formación en Físico-Matemático aplicado a sistemas computacionales</li>
+          </ul>
+
+          <div class="perfil-bio">
+            <p>Investigador, dramaturgo, músico, director escénico y creador de metodologías originales que integran física cuántica aplicada, neurociencia y artes escénicas en propuestas accionables para individuos, equipos y organizaciones.</p>
+            <p>Profesor invitado y colaborador en el Instituto Tecnológico de Monterrey (5 campus), Universidad Michoacana San Nicolás de Hidalgo, Escuela Superior de Arte Dramático de Valencia, Universidad de San Carlos de Guatemala, UNAM y Universidad Pontificia de México. Ha impartido talleres especializados a grandes personalidades de los ámbitos empresarial, artístico, deportivo, político y espiritual en México, Colombia, España, Guatemala, Chile y Estados Unidos.</p>
+            <p>Director artístico de la K'uinchekuà para la visita oficial del Papa Francisco a Morelia. Coordinador de la Exposición sobre la obra de Leonardo da Vinci. Productor general del Festival de Ópera ARS Vocalis México. Autor de más de 40 obras de divulgación científica a través del arte.</p>
+            <p>Dos veces ganador del Premio Padre de la Patria (UMSNH). Premio AD Honorem en Creación Interdisciplinaria — Asociación Internacional de Poetas y Escritores, Orlando, Florida (2018). Premio Nacional de Dramaturgia (2006 y 2007).</p>
+          </div>
+        </div>
+
+        <!-- MARYORY -->
+        <div class="perfil-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="perfil-avatar">M</div>
+          <h2 class="perfil-name">Maryory Montoya Maya</h2>
+          <p class="perfil-role">Socióloga · Profesional en Planeación del Desarrollo Social<br />Investigadora con estudios en Biosemiótica y Tecnologías Cuánticas del Pensamiento</p>
+
+          <h4 class="perfil-section-label">Formación</h4>
+          <ul class="perfil-formacion">
+            <li>· Profesional en Planeación y Desarrollo Social — Universidad Colegio Mayor de Antioquia, Colombia</li>
+            <li>· Diplomado Repensar las Violencias desde el Arte — UMSNH, México</li>
+            <li>· Diplomado Territorios y Ciudad — Corporación Penca de Sábila, Medellín</li>
+            <li>· Diplomado Ambientalismos, Feminismos y Participación Juvenil — SENA</li>
+          </ul>
+
+          <div class="perfil-bio">
+            <p>Científica social con estudios e investigación práctica en la intersección entre ciencias sociales, física cuántica aplicada y artes escénicas. Con más de una década de trayectoria en el diseño y realización de dispositivos de percepción, utilizando el arte como laboratorio para la restauración humana y la transformación de tejidos sociales.</p>
+            <p>Directora de Planeación y Gestión Social en los 5 Encuentros Internacionales TRANSFORMA (2017–2019). Responsable de la sistematización, evaluación y monitoreo de más de 150 dispositivos de investigación perceptual realizados en México, Colombia, España y Centroamérica.</p>
+            <p>Con estudios e investigación práctica en biosemiótica social — análisis de la comunicación y el lenguaje de la naturaleza aplicado a la resolución de conflictos y cohesión social. En 2023 coordinó procesos de intercambio con líderes espirituales indígenas en Sierra Nevada de Santa Marta, enfocados en la decodificación de lenguajes ecológicos y biosemióticos.</p>
+            <p>Actualmente se desempeña como puente operativo y analítico del proyecto, consolidando la base de datos cualitativa sobre la efectividad de los dispositivos de percepción cuántica en la restauración del tejido social y la psique humana.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 3: LABORATORIO VIVO =================== -->
+  <section class="laboratorio" id="laboratorio">
+    <div class="laboratorio-container">
+      <h2 data-aos="fade-up">20 Años de Laboratorio Vivo</h2>
+
+      <p class="laboratorio-intro" data-aos="fade-up" data-aos-delay="100">
+        No es un proyecto construido desde una oficina. Es el resultado de dos décadas de trabajo nómada, transdisciplinario e intercultural — desarrollado en contacto directo con poblaciones de cinco países, en hospitales, comunidades marginadas, universidades, empresas, festivales internacionales y territorios indígenas.
+      </p>
+
+      <div class="laboratorio-timeline">
+        <div class="lab-item" data-aos="fade-up"><div class="lab-dot"></div><div class="lab-year">2004</div><p>Nace SH Producciones en Morelia. Primer montaje sobre prevención de violencia y secuestros.</p></div>
+        <div class="lab-item" data-aos="fade-up"><div class="lab-dot"></div><div class="lab-year">2007</div><p>La Nave gana el Primer Concurso Nacional de Dramaturgia para Niños. Gira por 10 países de Sudamérica. 250+ representaciones.</p></div>
+        <div class="lab-item" data-aos="fade-up"><div class="lab-dot"></div><div class="lab-year">2011</div><p>José y Maryory se encuentran en Ecuador. Nace el laboratorio conjunto. K'uinchekuà en el Palacio de Bellas Artes.</p></div>
+        <div class="lab-item" data-aos="fade-up"><div class="lab-dot"></div><div class="lab-year">2016</div><p>Dirección artística de K'uinchekuà para la visita del Papa Francisco a Morelia. Primera gira por España y Andorra.</p></div>
+        <div class="lab-item" data-aos="fade-up"><div class="lab-dot"></div><div class="lab-year">2017–2019</div><p>5 Encuentros Internacionales TRANSFORMA en Morelia, Medellín y Quetzaltenango. 70+ actividades. Intercambio con físicos cuánticos mayas.</p></div>
+        <div class="lab-item" data-aos="fade-up"><div class="lab-dot"></div><div class="lab-year">2022–2023</div><p>Residencia en Colombia. Proyecto Instrumentos Joya. Residencia con comunidades indígenas en Sierra Nevada de Santa Marta.</p></div>
+        <div class="lab-item" data-aos="fade-up"><div class="lab-dot"></div><div class="lab-year">2025</div><p>Terapias escénicas con pacientes oncológicos en Oncomédica IPS. Estreno de 'Vibrar Bonito' — concierto terapéutico con Instrumentos Joya.</p></div>
+        <div class="lab-item" data-aos="fade-up"><div class="lab-dot"></div><div class="lab-year">2026</div><p>Nace la App Códigos Sublimes. 21 años de investigación disponibles para el mundo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 4: EL SISTEMA QUE CREARON =================== -->
+  <section class="sistema-creado" id="sistema-creado">
+    <div class="sistema-creado-container">
+      <div class="sistema-creado-box" data-aos="fade-up">
+        <blockquote class="sistema-creado-quote">
+          "Las tecnologías del pensamiento cuántico son el lenguaje científico transversal contemporáneo que unifica todo."
+        </blockquote>
+        <p class="sistema-creado-attr">— José Luis Pineda Servín</p>
+        <p class="sistema-creado-text">
+          Arquitectura de Percepción es el resultado de esa convicción aplicada durante 20 años. Un sistema que comenzó como pregunta científica-filosófica y terminó siendo tecnología verificable. Que comenzó en salas de sistemas, teatros y hospitales y hoy llega a cualquier persona en cualquier lugar del mundo a través de una app.
+        </p>
+        <div class="sistema-creado-buttons">
+          <a href="sistema.html" class="btn btn-primary">Conoce el Sistema</a>
+          <a href="app.html" class="btn-ghost-gold">Descubre tu Código</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Arquitectura de la Percepción<span class="tm">™</span></div>
+          <p class="footer-tagline">Un sistema vivo para habitar la realidad desde su mayor inteligencia disponible.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            <a href="#" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+            <li><a href="../index.html#app">App</a></li>
+            <li><a href="../index.html#inversion">Planes</a></li>
+            <li><a href="../index.html#trayectoria">Nosotros</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+            <li><a href="../index.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-cta-col">
+          <h4 class="footer-col-title">Comienza Ahora</h4>
+          <a href="../index.html#contacto" class="btn btn-primary">Descubre tu Código</a>
+          <p class="footer-cta-text">20 años de investigación respaldando cada código</p>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">© 2026 Arquitectura de Percepción · Experiencias Sublimes Internacional · www.codigossublimes.com</p>
+    </div>
+  </footer>
+
+  <script src="../js/quantum-bg.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

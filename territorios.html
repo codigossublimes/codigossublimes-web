@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Territorios — Arquitectura de la Percepción™</title>
+  <meta name="description" content="Tu territorio tiene un código, una vocación natural y un campo de posibilidades único. Lo leemos y lo convertimos en estrategia." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/territorios.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body data-theme="cosmos">
+
+  <canvas id="quantum-canvas"></canvas>
+
+  <svg class="sacred-geometry" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <radialGradient id="goldFade" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.18" />
+        <stop offset="70%" stop-color="#D4AF37" stop-opacity="0.05" />
+        <stop offset="100%" stop-color="#D4AF37" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <g stroke="url(#goldFade)" fill="none" stroke-width="1">
+      <circle cx="300" cy="300" r="80" /><circle cx="300" cy="220" r="80" /><circle cx="300" cy="380" r="80" />
+      <circle cx="231" cy="260" r="80" /><circle cx="369" cy="260" r="80" /><circle cx="231" cy="340" r="80" /><circle cx="369" cy="340" r="80" />
+      <circle cx="300" cy="300" r="160" /><circle cx="300" cy="300" r="240" />
+    </g>
+  </svg>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema visual">
+    <svg class="icon-cosmos" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+    <svg class="icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
+  </button>
+
+  <!-- =================== NAVBAR =================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Arquitectura de la Percepción<span class="tm">™</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+          <li><a href="./sistema.html">Sistema</a></li>
+          <li><a href="./app.html">App</a></li>
+          <li><a href="./inversion.html">Inversión</a></li>
+          <li><a href="./organizaciones.html">Organizaciones</a></li>
+          <li><a href="#">Territorios</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a href="../index.html#contacto" class="btn-nav-special">Descubre tu Código</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =================== HERO =================== -->
+  <header class="ter-hero" id="hero">
+    <div id="particles-js" class="particles-bg"></div>
+    <div class="ter-hero-content">
+      <span class="ter-hero-badge anim-fade-up anim-delay-1">PARA TERRITORIOS</span>
+      <h1 class="anim-fade-up anim-delay-1">Tu Territorio Tiene un Código.<br />Una Vocación Natural.<br />Un Campo de Posibilidades Único.</h1>
+      <p class="ter-hero-subtitle anim-fade-up anim-delay-2">Arquitectura de Percepción lee ese código y lo convierte en estrategia, identidad y prosperidad sostenible.</p>
+    </div>
+  </header>
+
+  <!-- =================== SECCIÓN 1: EL TERRITORIO COMO ACTOR =================== -->
+  <section class="actor" id="actor">
+    <div class="actor-container">
+      <h2 data-aos="fade-up">El Territorio No es el Escenario<br />de lo Que Ocurre.<br />Es un Actor con Código Propio.</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Cada ciudad, región o país tiene una configuración perceptual específica — una manera de generar coherencia, de atraer lo que le pertenece y de producir experiencias que ningún otro lugar puede replicar. Cuando un territorio opera desde esa arquitectura natural, todo fluye. Cuando la ignora — o peor, cuando impone una narrativa que no le pertenece — la fricción es sistémica y el desgaste es progresivo.</p>
+      <p data-aos="fade-up" data-aos-delay="200">No es metáfora. Es una lectura técnica del campo que el territorio produce — y que puede ser diagnosticada, comprendida y llevada a estrategia concreta.</p>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 2: APLICACIONES =================== -->
+  <section class="aplicaciones" id="aplicaciones">
+    <div class="aplicaciones-container">
+      <h2 data-aos="fade-up">Lo Que el Sistema Activa<br />en un Territorio</h2>
+      <div class="aplicaciones-grid">
+        <div class="aplicacion-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="aplicacion-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="#D4AF37" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="2"/><circle cx="18" cy="13" r="2"/><circle cx="27" cy="7" r="2"/><circle cx="13" cy="20" r="2"/><circle cx="24" cy="22" r="2"/><circle cx="7" cy="28" r="2"/><circle cx="18" cy="29" r="2"/><circle cx="29" cy="28" r="2"/></svg></div>
+          <h3>TURISMO EXPERIENCIAL</h3>
+          <p>Rutas certificadas diseñadas desde el Código del territorio — no desde lo que el mercado masivo demanda. Visitantes atraídos por resonancia real generan mayor gasto promedio, mayor satisfacción y menor desgaste del patrimonio. Un municipio piloto documentó +127% en turismo de alto valor y +$240 USD de gasto promedio por visitante.</p>
+        </div>
+        <div class="aplicacion-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="aplicacion-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M18 4 L30 10 L30 20 Q30 28 18 32 Q6 28 6 20 L6 10 Z"/><line x1="18" y1="12" x2="18" y2="22"/><line x1="13" y1="17" x2="23" y2="17"/></svg></div>
+          <h3>IDENTIDAD TERRITORIAL</h3>
+          <p>La marca del territorio construida desde su arquitectura perceptual real — no desde narrativas impuestas por consultoras externas. Una identidad que el propio lugar reconoce como verdadera genera adherencia ciudadana y atrae inversión y visitantes que verdaderamente pertenecen.</p>
+        </div>
+        <div class="aplicacion-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="aplicacion-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="13" r="4"/><circle cx="25" cy="13" r="4"/><circle cx="18" cy="27" r="4"/><line x1="14" y1="15" x2="22" y2="15"/><line x1="13" y1="17" x2="16" y2="24"/><line x1="23" y1="17" x2="20" y2="24"/></svg></div>
+          <h3>COHESIÓN SOCIAL</h3>
+          <p>Programas y rituales cívicos alineados con los ritmos reales del campo colectivo. Menor fricción en implementación de políticas, mayor adherencia ciudadana y comunidades más coherentes en torno a su identidad compartida.</p>
+        </div>
+        <div class="aplicacion-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="aplicacion-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="13" width="7" height="20"/><rect x="14" y="7" width="8" height="26"/><rect x="25" y="17" width="7" height="16"/><line x1="3" y1="33" x2="34" y2="33"/></svg></div>
+          <h3>POLÍTICA PÚBLICA</h3>
+          <p>Salud pública, educación y planificación urbana que considera la sincronía colectiva del territorio. Los programas que respetan los ritmos naturales del campo producen mayor impacto con menor costo de implementación.</p>
+        </div>
+        <div class="aplicacion-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="aplicacion-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M4 26 Q10 18 14 22 Q20 12 26 16 Q30 8 32 4"/><polyline points="26 4 32 4 32 10"/></svg></div>
+          <h3>PATRIMONIO VIVENCIAL</h3>
+          <p>Los saberes, tradiciones y expresiones culturales del territorio son activos de altísimo valor cuando son leídos desde su Código. Rutas patrimoniales que no solo muestran — que transmiten la inteligencia perceptual del lugar.</p>
+        </div>
+        <div class="aplicacion-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="aplicacion-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M5 29 L5 16 Q5 11 10 11 L26 11 Q31 11 31 16 L31 29 Z"/><line x1="3" y1="29" x2="33" y2="29"/><line x1="13" y1="11" x2="13" y2="6"/><line x1="23" y1="11" x2="23" y2="6"/><line x1="13" y1="18" x2="23" y2="18"/><line x1="13" y1="24" x2="23" y2="24"/></svg></div>
+          <h3>EVENTOS Y FESTIVALES</h3>
+          <p>Encuentros diseñados según los Códigos de los días en que ocurren — que activan el campo colectivo del territorio, generan impacto económico medible y posicionan al lugar como referente de transformación cultural consciente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 3: CASO DOCUMENTADO =================== -->
+  <section class="caso" id="caso">
+    <div class="caso-container">
+      <h2 data-aos="fade-up">Resultado Documentado</h2>
+      <div class="caso-caja" data-aos="fade-up" data-aos-delay="100">
+        <span class="caso-badge">PILOTO TERRITORIAL</span>
+        <p class="caso-texto">Un municipio de 120,000 habitantes implementó el sistema durante 12 meses. La estrategia fue diseñada desde el Código territorial — no desde un modelo genérico de turismo.</p>
+        <div class="caso-grid">
+          <div class="caso-num">
+            <div class="caso-num-valor">$4.2M USD</div>
+            <p>ingresos adicionales de turismo en el primer año</p>
+          </div>
+          <div class="caso-num">
+            <div class="caso-num-valor">5.25x</div>
+            <p>retorno sobre inversión en el primer año</p>
+          </div>
+          <div class="caso-num">
+            <div class="caso-num-valor">+127%</div>
+            <p>incremento en turismo de alto valor</p>
+          </div>
+          <div class="caso-num">
+            <div class="caso-num-valor">+34 pts</div>
+            <p>satisfacción ciudadana (NPS)</p>
+          </div>
+        </div>
+        <p class="caso-italic">No fue un resultado de marketing. Fue el resultado de que el territorio operara desde su arquitectura perceptual real.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 4: PROCESO =================== -->
+  <section class="proceso" id="proceso">
+    <div class="proceso-container">
+      <h2 data-aos="fade-up">Cómo se Implementa</h2>
+      <div class="proceso-timeline">
+        <div class="proceso-paso" data-aos="fade-up" data-aos-delay="0">
+          <div class="proceso-num">01</div>
+          <div class="proceso-content">
+            <h3>DIAGNÓSTICO</h3>
+            <p>Lectura técnica del Código territorial. Identificación de vocación natural, campo de posibilidades y puntos de mayor coherencia disponible.</p>
+          </div>
+        </div>
+        <div class="proceso-paso" data-aos="fade-up" data-aos-delay="100">
+          <div class="proceso-num">02</div>
+          <div class="proceso-content">
+            <h3>ESTRATEGIA</h3>
+            <p>Diseño de la hoja de ruta desde la arquitectura perceptual real del territorio — no desde modelos importados. Métricas acordadas con el equipo local.</p>
+          </div>
+        </div>
+        <div class="proceso-paso" data-aos="fade-up" data-aos-delay="200">
+          <div class="proceso-num">03</div>
+          <div class="proceso-content">
+            <h3>PILOTO</h3>
+            <p>Implementación en cohortes específicas con medición continua. El territorio aprende a leerse mientras los resultados se acumulan.</p>
+          </div>
+        </div>
+        <div class="proceso-paso" data-aos="fade-up" data-aos-delay="300">
+          <div class="proceso-num">04</div>
+          <div class="proceso-content">
+            <h3>EXPANSIÓN</h3>
+            <p>Los casos documentados abren los siguientes niveles. El sistema escala con el territorio — no se impone desde afuera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 5: CTA =================== -->
+  <section class="cta-territorio" id="cta-territorio">
+    <div class="cta-territorio-container">
+      <h2 data-aos="fade-up">Tu Territorio Ya Tiene un Código.<br />La Pregunta es si Estás Listo para Leerlo.</h2>
+      <a href="../index.html#contacto" class="btn btn-primary btn-large" data-aos="fade-up" data-aos-delay="100">Solicitar Diagnóstico Territorial</a>
+      <p class="cta-note" data-aos="fade-up" data-aos-delay="200">Sesión inicial sin costo — 30 minutos con el equipo de Arquitectura de Percepción</p>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Arquitectura de la Percepción<span class="tm">™</span></div>
+          <p class="footer-tagline">Un sistema vivo para habitar la realidad desde su mayor inteligencia disponible.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            <a href="#" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+            <li><a href="./app.html">App</a></li>
+            <li><a href="./inversion.html">Planes</a></li>
+            <li><a href="./organizaciones.html">Organizaciones</a></li>
+            <li><a href="./territorios.html">Territorios</a></li>
+            <li><a href="./retiros.html">Retiros</a></li>
+            <li><a href="./diplomado.html">Diplomado</a></li>
+            <li><a href="./coleccion.html">Colección</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-cta-col">
+          <h4 class="footer-col-title">Comienza Ahora</h4>
+          <a href="../index.html#contacto" class="btn btn-primary">Descubre tu Código</a>
+          <p class="footer-cta-text">20 años de investigación respaldando cada código</p>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">© 2026 Arquitectura de Percepción · Experiencias Sublimes Internacional · www.codigossublimes.com</p>
+    </div>
+  </footer>
+
+  <script src="../js/quantum-bg.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    if (window.particlesJS) {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 30, density: { enable: true, value_area: 900 } },
+          color: { value: '#D4AF37' },
+          opacity: { value: 0.3, random: true },
+          size: { value: 2, random: true },
+          line_linked: { enable: true, distance: 130, color: '#D4AF37', opacity: 0.15, width: 1 },
+          move: { enable: true, speed: 0.6, direction: 'none', random: true, out_mode: 'out' }
+        },
+        interactivity: { detect_on: 'canvas', events: { onhover: { enable: false }, onclick: { enable: false } } },
+        retina_detect: true
+      });
+    }
+    if (window.AOS) { AOS.init({ duration: 900, once: true, offset: 60 }); }
+  </script>
+</body>
+</html>

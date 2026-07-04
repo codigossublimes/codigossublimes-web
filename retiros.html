@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retiros Terapéuticos — Arquitectura de la Percepción™</title>
+  <meta name="description" content="Retiros terapéuticos diseñados por el campo mismo. Experiencias únicas e irrepetibles nacidas de los códigos de los días." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/retiros.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body data-theme="cosmos">
+
+  <canvas id="quantum-canvas"></canvas>
+
+  <svg class="sacred-geometry" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <radialGradient id="goldFade" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.18" />
+        <stop offset="70%" stop-color="#D4AF37" stop-opacity="0.05" />
+        <stop offset="100%" stop-color="#D4AF37" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <g stroke="url(#goldFade)" fill="none" stroke-width="1">
+      <circle cx="300" cy="300" r="80" />
+      <circle cx="300" cy="220" r="80" />
+      <circle cx="300" cy="380" r="80" />
+      <circle cx="231" cy="260" r="80" />
+      <circle cx="369" cy="260" r="80" />
+      <circle cx="231" cy="340" r="80" />
+      <circle cx="369" cy="340" r="80" />
+      <circle cx="300" cy="300" r="160" />
+      <circle cx="300" cy="300" r="240" />
+    </g>
+  </svg>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema visual">
+    <svg class="icon-cosmos" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+    <svg class="icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
+  </button>
+
+  <!-- =================== NAVBAR =================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Arquitectura de la Percepción<span class="tm">™</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+          <li><a href="./sistema.html">Sistema</a></li>
+          <li><a href="./app.html">App</a></li>
+          <li><a href="../index.html#inversion">Inversión</a></li>
+          <li><a href="./jose-y-mar.html">Equipo</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a href="../index.html#contacto" class="btn-nav-special">Descubre tu Código</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =================== HERO =================== -->
+  <header class="retiro-hero" id="hero">
+    <div id="particles-js" class="particles-bg"></div>
+    <div class="retiro-hero-content">
+      <span class="retiro-hero-badge anim-fade-up anim-delay-1">RETIROS TERAPÉUTICOS</span>
+      <h1 class="anim-fade-up anim-delay-1">Una Experiencia Diseñada<br />por el Campo Mismo.</h1>
+      <p class="retiro-hero-subtitle anim-fade-up anim-delay-2">Cada retiro nace de los códigos de los días en que ocurrirá. No hay dos iguales.</p>
+    </div>
+  </header>
+
+  <!-- =================== SECCIÓN 1: QUÉ ES =================== -->
+  <section class="que-es" id="que-es">
+    <div class="que-es-container">
+      <h2 data-aos="fade-up">El Retiro Como Laboratorio Vivo</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Los retiros terapéuticos de Arquitectura de Percepción no tienen una programación fija prediseñada. Se arman cuando un grupo está convocado o cuando encontramos un territorio cuya energía es propicia. La programación específica se construye a partir de los códigos de los días exactos en que ocurrirá — lo que significa que cada retiro es una experiencia única, irrepetible y completamente alineada con la energía disponible en ese momento preciso del ciclo.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Hay una lógica base que siempre entreteje la experiencia — un hilo conductor que garantiza profundidad, transformación real y una experiencia completa en todas las dimensiones. Pero la forma exacta que toma ese hilo está siempre viva, respondiendo al campo.</p>
+      <div class="decorative-line" data-aos="fade-up"></div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 2: LO QUE SIEMPRE ESTÁ PRESENTE =================== -->
+  <section class="presencia" id="presencia">
+    <div class="presencia-container">
+      <h2 data-aos="fade-up">La Experiencia Completa</h2>
+      <p class="presencia-subtitle" data-aos="fade-up" data-aos-delay="100">Ocho dimensiones que siempre están presentes — en la forma que el campo de ese retiro específico las convoque.</p>
+      <div class="presencia-grid">
+        <div class="presencia-card" data-aos="fade-up" data-aos-delay="0"><div class="presencia-num">01</div><h3>EL LENGUAJE DE LA NATURALEZA</h3><p>Prácticas para aprender a leer y comprender el lenguaje de la naturaleza y la realidad — el sistema de signos que el campo comunica cuando la percepción está entrenada para recibirla.</p></div>
+        <div class="presencia-card" data-aos="fade-up" data-aos-delay="100"><div class="presencia-num">02</div><h3>GASTRONOMÍA ANCESTRAL GOURMET</h3><p>Experiencia culinaria inspirada en la tradición gastronómica mexicana con tintes de cocinas del mundo. Cada alimento elegido según los códigos del día y sus propiedades de resonancia con el campo disponible.</p></div>
+        <div class="presencia-card" data-aos="fade-up" data-aos-delay="200"><div class="presencia-num">03</div><h3>TERAPIAS ESCÉNICAS CON MÚSICA EN VIVO</h3><p>El arte escénico como tecnología terapéutica. Música interpretada en vivo con los Instrumentos Joya — creados específicamente para la restauración del campo humano.</p></div>
+        <div class="presencia-card" data-aos="fade-up" data-aos-delay="300"><div class="presencia-num">04</div><h3>PERFORMANCE Y MOVIMIENTO</h3><p>El cuerpo como mapa de información. Prácticas de movimiento consciente que activan las articulaciones específicas de las Fuerzas presentes en los días del retiro.</p></div>
+        <div class="presencia-card" data-aos="fade-up" data-aos-delay="0"><div class="presencia-num">05</div><h3>NOCHE CON EL MAESTRO FUEGO</h3><p>Una práctica ceremonial alrededor del fuego — uno de los cuatro elementos fundamentales del sistema. Espacio de integración profunda, palabra y presencia del campo colectivo en su dimensión más antigua.</p></div>
+        <div class="presencia-card" data-aos="fade-up" data-aos-delay="100"><div class="presencia-num">06</div><h3>PRÁCTICA DE SEXUALIDAD SAGRADA</h3><p>Una de las dimensiones más profundas del sistema — trabajada con el rigor, la elegancia y el respeto que merece. La sexualidad como inteligencia, no como tabú.</p></div>
+        <div class="presencia-card" data-aos="fade-up" data-aos-delay="200"><div class="presencia-num">07</div><h3>CLASE MAGISTRAL DE PENSAMIENTO CUÁNTICO</h3><p>Formación directa con José Luis Pineda Servín en los fundamentos del sistema — física cuántica aplicada, Arquitectura de Percepción, Códigos y Fuerzas — en profundidad y con aplicación práctica inmediata.</p></div>
+        <div class="presencia-card" data-aos="fade-up" data-aos-delay="300"><div class="presencia-num">08</div><h3>OBRA PICTOGRÁFICA PERSONALIZADA</h3><p>Cada participante recibe como regalo su pictograma personalizado de la colección de 33 obras — impreso y enmarcado. Una pieza de arte original que sintetiza visualmente su código específico. Además de otros regalos y beneficios de continuidad.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 3: INVERSIÓN =================== -->
+  <section class="inversion-retiro" id="inversion-retiro">
+    <div class="inversion-retiro-container">
+      <h2 data-aos="fade-up">Inversión</h2>
+      <div class="inversion-box" data-aos="fade-up" data-aos-delay="100">
+        <p class="inversion-price">La inversión varía según la duración del retiro y el territorio donde ocurre. El rango habitual es entre $1,000,000 y $2,500,000 COP.</p>
+        <div class="inversion-divider"></div>
+        <p class="inversion-alt">Como en todos los servicios de Arquitectura de Percepción, el papel moneda no es la única forma de acceso. Exploramos intercambios, alianzas, modelos híbridos y coproducciones. Si el campo te convoca, escríbenos — siempre hay un camino.</p>
+        <div class="inversion-buttons">
+          <a href="../index.html#contacto" class="btn btn-primary">Quiero participar en un retiro</a>
+          <a href="../index.html#economia" class="btn-ghost-gold">Conocer las posibilidades de intercambio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 4: CÓMO SE FORMA =================== -->
+  <section class="como-nace" id="como-nace">
+    <div class="como-nace-container">
+      <h3 data-aos="fade-up">¿Cómo nace un retiro?</h3>
+      <div class="pasos">
+        <div class="paso" data-aos="fade-up">
+          <div class="paso-circle">01</div>
+          <div class="paso-content">
+            <h4>EL CAMPO CONVOCA</h4>
+            <p>Un grupo de personas siente la llamada o encontramos un territorio cuya energía es propicia. El retiro no se vende como producto — se convoca como experiencia.</p>
+          </div>
+        </div>
+        <div class="paso" data-aos="fade-up" data-aos-delay="100">
+          <div class="paso-circle">02</div>
+          <div class="paso-content">
+            <h4>LOS CÓDIGOS DISEÑAN</h4>
+            <p>Identificamos los días específicos y leemos sus códigos. La programación detallada nace de esa lectura — alineada con la energía disponible en ese momento preciso del ciclo.</p>
+          </div>
+        </div>
+        <div class="paso" data-aos="fade-up" data-aos-delay="200">
+          <div class="paso-circle">03</div>
+          <div class="paso-content">
+            <h4>EL CAMPO SE HABITA</h4>
+            <p>La experiencia ocurre. Cada retiro es único, irrepetible y completo. Los participantes regresan con su código más claro, su campo más coherente y herramientas concretas para habitar su realidad desde su mayor inteligencia disponible.</p>
+          </div>
+        </div>
+      </div>
+      <div class="como-nace-cta" data-aos="fade-up">
+        <p class="como-nace-cta-text">¿Sientes que el campo te está convocando?</p>
+        <a href="../index.html#contacto" class="btn btn-primary">Escríbenos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Arquitectura de la Percepción<span class="tm">™</span></div>
+          <p class="footer-tagline">Un sistema vivo para habitar la realidad desde su mayor inteligencia disponible.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            <a href="#" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+            <li><a href="./app.html">App</a></li>
+            <li><a href="../index.html#inversion">Planes</a></li>
+            <li><a href="./retiros.html">Retiros</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-cta-col">
+          <h4 class="footer-col-title">Comienza Ahora</h4>
+          <a href="../index.html#contacto" class="btn btn-primary">Descubre tu Código</a>
+          <p class="footer-cta-text">20 años de investigación respaldando cada código</p>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">© 2026 Arquitectura de Percepción · Experiencias Sublimes Internacional · www.codigossublimes.com</p>
+    </div>
+  </footer>
+
+  <script src="../js/quantum-bg.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // Inicializar partículas reducidas para el hero del retiro
+    if (window.particlesJS) {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 30, density: { enable: true, value_area: 900 } },
+          color: { value: '#D4AF37' },
+          opacity: { value: 0.3, random: true },
+          size: { value: 2, random: true },
+          line_linked: { enable: true, distance: 130, color: '#D4AF37', opacity: 0.15, width: 1 },
+          move: { enable: true, speed: 0.6, direction: 'none', random: true, out_mode: 'out' }
+        },
+        interactivity: { detect_on: 'canvas', events: { onhover: { enable: false }, onclick: { enable: false } } },
+        retina_detect: true
+      });
+    }
+    // Inicializar AOS
+    if (window.AOS) { AOS.init({ duration: 900, once: true, offset: 60 }); }
+  </script>
+</body>
+</html>

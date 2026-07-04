@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Códigos Sublimes — Arquitectura de la Percepción™</title>
+  <meta name="description" content="La guía diaria más precisa disponible para habitar el tiempo con inteligencia." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/app.css" />
+
+  <!-- particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- AOS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body data-theme="cosmos">
+
+  <!-- FONDO CUÁNTICO -->
+  <canvas id="quantum-canvas"></canvas>
+
+  <!-- GEOMETRÍA SAGRADA -->
+  <svg class="sacred-geometry" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <radialGradient id="goldFade" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.18" />
+        <stop offset="70%" stop-color="#D4AF37" stop-opacity="0.05" />
+        <stop offset="100%" stop-color="#D4AF37" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <g stroke="url(#goldFade)" fill="none" stroke-width="1">
+      <circle cx="300" cy="300" r="80" />
+      <circle cx="300" cy="220" r="80" />
+      <circle cx="300" cy="380" r="80" />
+      <circle cx="231" cy="260" r="80" />
+      <circle cx="369" cy="260" r="80" />
+      <circle cx="231" cy="340" r="80" />
+      <circle cx="369" cy="340" r="80" />
+      <circle cx="300" cy="300" r="160" />
+      <circle cx="300" cy="300" r="240" />
+    </g>
+  </svg>
+
+  <!-- TOGGLE TEMA -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema visual">
+    <svg class="icon-cosmos" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+    <svg class="icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  </button>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        Arquitectura de la Percepción<span class="tm">™</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+          <li><a href="../index.html#app">App</a></li>
+          <li><a href="../index.html#inversion">Inversión</a></li>
+          <li><a href="../index.html#trayectoria">Nosotros</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a href="../index.html#contacto" class="btn-nav-special">Descubre tu Código</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =================== HERO =================== -->
+  <header class="app-hero" id="hero">
+    <div id="particles-js" class="particles-bg"></div>
+    <div class="app-hero-content">
+      <span class="app-hero-badge" data-aos="fade-up">APP CÓDIGOS SUBLIMES</span>
+      <h1 data-aos="fade-up" data-aos-delay="100">
+        La Guía Diaria Más Precisa Disponible<br />
+        para Habitar el Tiempo con Inteligencia.
+      </h1>
+      <p class="app-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+        Cada día — su Código. Cada Código — su inteligencia específica. Disponible para cualquier persona en cualquier lugar del mundo.
+      </p>
+      <a href="#" class="btn btn-primary app-hero-btn" data-aos="fade-up" data-aos-delay="300">Acceder a la App</a> <!-- REEMPLAZAR CON URL REAL DE APP -->
+    </div>
+  </header>
+
+  <!-- =================== SECCIÓN 1: LAS 4 HERRAMIENTAS =================== -->
+  <section class="tools" id="herramientas">
+    <div class="tools-container">
+      <h2 data-aos="fade-up">cuatro Herramientas. Un Sistema.</h2>
+
+      <div class="tools-grid">
+        <!-- COLUMNA 1: GUÍA DIARIA -->
+        <div class="tool-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="tool-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="8" width="28" height="26" rx="2"/><line x1="6" y1="16" x2="34" y2="16"/><line x1="13" y1="4" x2="13" y2="10"/><line x1="27" y1="4" x2="27" y2="10"/><circle cx="13" cy="22" r="1.5" fill="#D4AF37"/><circle cx="20" cy="22" r="1.5" fill="#D4AF37"/><circle cx="27" cy="22" r="1.5" fill="#D4AF37"/><circle cx="13" cy="28" r="1.5" fill="#D4AF37"/><circle cx="20" cy="28" r="1.5" fill="#D4AF37"/></svg>
+          </div>
+          <h3 class="tool-title">CALENDARIO ENERGÉTICO</h3>
+          <p class="tool-subtitle">El Código y la Fuerza de cada día</p>
+          <p class="tool-text">Cada día la app entrega (según el paquete adquirido) la combinación activa con orientación completa en 8 dimensiones:</p>
+          <ul class="tool-list">
+            <li>01 · Propósito del día</li>
+            <li>02 · Emociones disponibles</li>
+            <li>03 · Pensamientos y proyectos</li>
+            <li>04 · Actividades recomendadas</li>
+            <li>05 · Salud — movimiento y nutrición</li>
+            <li>06 · Amor y vínculos</li>
+            <li>07 · Abundancia</li>
+            <li>08 · Sexualidad sagrada</li>
+          </ul>
+          <p class="tool-italic">Cada sección incluye la profundidad que el campo requiere y una guía práctica inmediatamente aplicable.</p>
+        </div>
+
+        <!-- COLUMNA 2: CALCULADORA -->
+        <div class="tool-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="tool-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="#D4AF37" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="2.5"/><circle cx="20" cy="12" r="2.5"/><circle cx="28" cy="12" r="2.5"/><circle cx="12" cy="20" r="2.5"/><circle cx="20" cy="20" r="2.5"/><circle cx="28" cy="20" r="2.5"/><circle cx="12" cy="28" r="2.5"/><circle cx="20" cy="28" r="2.5"/><circle cx="28" cy="28" r="2.5"/></svg>
+          </div>
+          <h3 class="tool-title">CALCULADORA DE PERCEPCIÓN</h3>
+          <p class="tool-subtitle">El Código de cualquier entidad</p>
+          <p class="tool-text">Calcula el código de personas, fechas, lugares, animales y proyectos. Obtienes una guía profunda con más de 20 campos:</p>
+          <ul class="tool-list">
+            <li>· Configuración perceptual específica</li>
+            <li>· Inteligencia dominante disponible</li>
+            <li>· Cuerpo — articulaciones y cuidado</li>
+            <li>· Propósito del código</li>
+            <li>· Actitudes mentales del campo</li>
+            <li>· Alianza de código y fuerza específicos para autoconocimiento</li>
+            <li>· Valores, principios y talentos del código</li>
+            <li>· Vocación natural</li>
+            <li>· Territorios y espacios de resonancia</li>
+            <li>· Plantas, minerales y elementos afines</li>
+            <li>· Recetas y alimentos que potencian tu configuración</li>
+            <li>· Y mucho más</li>
+          </ul>
+          <p class="tool-italic">Amplía tu concepción de ti mismo y de la realidad. Te inspira cómo interactuar con aquello que calculas.</p>
+        </div>
+
+        <!-- COLUMNA 3: TRAYECTORIA SOLAR -->
+        <div class="tool-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="tool-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="10"/><line x1="20" y1="20" x2="20" y2="13"/><line x1="20" y1="20" x2="26" y2="20"/><line x1="20" y1="3" x2="20" y2="7"/><line x1="20" y1="33" x2="20" y2="37"/><line x1="3" y1="20" x2="7" y2="20"/><line x1="33" y1="20" x2="37" y2="20"/><line x1="8" y1="8" x2="11" y2="11"/><line x1="29" y1="29" x2="32" y2="32"/><line x1="32" y1="8" x2="29" y2="11"/><line x1="11" y1="29" x2="8" y2="32"/></svg>
+          </div>
+          <h3 class="tool-title">TRAYECTORIA SOLAR / INTERIOR</h3>
+          <p class="tool-subtitle">Relojes en tiempo real del día</p>
+          <p class="tool-text">Relojes que en tiempo real te muestran 4 fases y disposiciones energéticas del día y la noche para alinear y dar seguimiento a tus fluctuaciones en cada momento del día.</p>
+          <p class="tool-italic tool-free">Gratis</p>
+        </div>
+
+        <!-- COLUMNA 4: CUERPO COMO LENGUAJE -->
+        <div class="tool-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="tool-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="8" r="4"/><line x1="20" y1="12" x2="20" y2="28"/><line x1="12" y1="18" x2="28" y2="18"/><line x1="20" y1="28" x2="14" y2="36"/><line x1="20" y1="28" x2="26" y2="36"/></svg>
+          </div>
+          <h3 class="tool-title">EL CUERPO COMO LENGUAJE</h3>
+          <p class="tool-subtitle">Tu cuerpo como mapa de información</p>
+          <p class="tool-text">Comprende qué significa cada punto del cuerpo, qué código le representa y cómo interpretar situaciones en tu cuerpo para prevenirlas, atenderlas y sanarlas de forma integral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 2: PARA QUÉ SIRVE =================== -->
+  <section class="benefits app-benefits" id="beneficios">
+    <div class="benefits-container">
+      <h2 class="benefits-title" data-aos="fade-up">Lo Que Cambia Cuando Habitas tu Código</h2>
+      <p class="benefits-subtitle" data-aos="fade-up" data-aos-delay="100">El sistema comprende más que síntomas. Incide sobre la arquitectura que los produce.</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="8" r="4"/><line x1="20" y1="12" x2="20" y2="24"/><line x1="12" y1="16" x2="28" y2="16"/><line x1="20" y1="24" x2="14" y2="34"/><line x1="20" y1="24" x2="26" y2="34"/></svg></div>
+          <h3 class="benefit-title">EN EL CUERPO</h3>
+          <p class="benefit-text">Cada Fuerza está anclada en una articulación específica. Conocer qué parte del sistema está activa hoy permite moverla, nutrirla y cuidarla con una intención que transforma el autocuidado en una práctica de precisión real. El cuerpo deja de ser un misterio.</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M4 30 Q12 20 20 22 T36 8"/><polyline points="30 8 36 8 36 14"/></svg></div>
+          <h3 class="benefit-title">EN LAS EMOCIONES</h3>
+          <p class="benefit-text">El sistema opera desde emociones de alta vibración — alegría, ternura, empatía, serenidad, gratitud — como tecnologías de inteligencia. La vida emocional deja de ser reactiva y se convierte en una práctica consciente de expansión continua.</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="#D4AF37" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="2.5"/><circle cx="20" cy="10" r="2.5"/><circle cx="30" cy="10" r="2.5"/><circle cx="10" cy="20" r="2.5"/><circle cx="20" cy="20" r="2.5"/><circle cx="30" cy="20" r="2.5"/><circle cx="10" cy="30" r="2.5"/><circle cx="20" cy="30" r="2.5"/><circle cx="30" cy="30" r="2.5"/></svg></div>
+          <h3 class="benefit-title">EN LA MENTE</h3>
+          <p class="benefit-text">Cada punto del ciclo activa actitudes mentales específicas — proactividad, flexibilidad, prudencia, enfoque, receptividad — que orientan el pensamiento hacia lo más fértil disponible. En lugar de reaccionar al día, se aprende a habitarlo.</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><path d="M20 20 C20 19 21 18 22 18 C25 18 26 21 26 23 C26 27 22 29 18 29 C12 29 8 24 8 18 C8 10 15 5 23 5"/></svg></div>
+          <h3 class="benefit-title">EN EL ESPÍRITU</h3>
+          <p class="benefit-text">Los ciclos no son repeticiones — son espirales que cada vuelta abren un nivel más profundo de comprensión, sutileza y consciencia disponible. La vida espiritual deja de ser especulativa y se convierte en una práctica de habitación del campo.</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="10" x2="30" y2="10"/><line x1="10" y1="10" x2="20" y2="30"/><line x1="30" y1="10" x2="20" y2="30"/><circle cx="10" cy="10" r="3" fill="#D4AF37"/><circle cx="30" cy="10" r="3" fill="#D4AF37"/><circle cx="20" cy="30" r="3" fill="#D4AF37"/></svg></div>
+          <h3 class="benefit-title">EN LA COMUNIDAD</h3>
+          <p class="benefit-text">Cada persona que comprende su configuración eleva simultáneamente el campo colectivo que la rodea. Los equipos que conocen sus Códigos producen más, con menor fricción y mayor calidad de colaboración.</p>
+        </div>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#D4AF37" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><line x1="4" y1="8" x2="20" y2="20"/><line x1="4" y1="20" x2="20" y2="20"/><line x1="4" y1="32" x2="20" y2="20"/><line x1="20" y1="20" x2="36" y2="20"/><circle cx="36" cy="20" r="3" fill="#D4AF37"/></svg></div>
+          <h3 class="benefit-title">EN LA ECONOMÍA</h3>
+          <p class="benefit-text">Modelos de inversión con retornos documentados, impacto medible en productividad empresarial y múltiples formas de generar abundancia donde el acceso económico nunca es un obstáculo.</p>
+        </div>
+      </div>
+
+      <p class="benefits-final" data-aos="fade-up" data-aos-delay="100">Este es un sistema donde toda experiencia es información disponible para la expansión.</p>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 3: PLANES =================== -->
+  <section class="app-plans-section" id="planes">
+    <div class="app-plans-container">
+
+      <h2 class="section-title" data-aos="fade-up">Elige Tu Acceso</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Este es un proyecto autogestivo que financia su propia investigación y expansión. Cada inversión contribuye a que el conocimiento de 20 años siga llegando a más personas, comunidades y territorios — y a que la abundancia que genera fluya en múltiples direcciones simultáneamente.</p>
+
+      <div class="tabs-wrapper" data-aos="fade-up" data-aos-delay="200">
+        <button class="tab active plan-tab" data-plan="calendario">Calendario Cósmico</button>
+        <button class="tab plan-tab" data-plan="calculadora">Calculadora de Percepción</button>
+      </div>
+
+      <!-- Tab 1: Calendario Cósmico -->
+      <div class="tab-content plan-content active" id="plan-calendario">
+        <p class="plan-intro" data-aos="fade-up">Accede al código energético de cada día del año. Planifica tu vida, salud, amor y prosperidad en sincronía con tu naturaleza.</p>
+        <div class="pricing-grid pricing-3">
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header pricing-header-blue">ELEMENTAL</div>
+            <div class="pricing-price"><span class="price-monthly">$10 USD<span class="price-period">/mes</span></span></div>
+            <div class="pricing-yearly">$99 USD/año <span class="save-badge">Ahorra 17%</span></div>
+            <ul class="pricing-features">
+              <li class="yes">Información elemental del código de cada día</li>
+              <li class="yes">Color y elemento dominante</li>
+              <li class="yes">Tip diario de consciencia</li>
+              <li class="no">Guía completa de propósito</li>
+              <li class="no">Salud, amor y abundancia</li>
+              <li class="no">Calculadora personal</li>
+            </ul>
+            <a href="../index.html#contacto" class="btn-ghost-gold btn-block">Comenzar</a>
+          </div>
+          <div class="pricing-card pricing-card-featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-header pricing-header-gold">INSPIRACIÓN <span class="pop-badge">Más Popular</span></div>
+            <div class="pricing-price"><span class="price-monthly">$15 USD<span class="price-period">/mes</span></span></div>
+            <div class="pricing-yearly">$125 USD/año <span class="save-badge">Ahorra 31%</span></div>
+            <ul class="pricing-features">
+              <li class="yes">30 días: 30 créditos (1 crédito = 1 día del calendario)</li>
+              <li class="yes">Anual: acceso completo a las 365 casillas</li>
+              <li class="yes">Propósito, emociones, pensamientos y actividades del día</li>
+              <li class="yes">Tip de rejuvenecimiento diario</li>
+              <li class="yes">Abundancia y amor por código del día</li>
+              <li class="no">Guía completa (salud profunda, sexualidad, territorios)</li>
+              <li class="no">Calculadora personal</li>
+            </ul>
+            <a href="../index.html#contacto" class="btn btn-primary btn-block">Elegir Inspiración</a>
+          </div>
+          <div class="pricing-card pricing-card-recommended" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-header pricing-header-deep">SUBLIME <span class="pop-badge">Recomendado</span></div>
+            <div class="pricing-price"><span class="price-monthly">$220 USD<span class="price-period">/mes</span></span></div>
+            <div class="pricing-yearly">$2,500 USD/año <span class="save-badge">Taller personalizado incluido</span></div>
+            <ul class="pricing-features">
+              <li class="yes">30 días: 30 créditos calendario + Calculadora desbloqueada</li>
+              <li class="yes">Anual: 365 créditos + Calculadora completa</li>
+              <li class="yes">Guía diaria COMPLETA (todos los campos)</li>
+              <li class="yes">Salud profunda, amor, sexualidad sagrada, territorios</li>
+              <li class="yes">Plantas, minerales, metales y recetas por código</li>
+              <li class="yes">Calculadora de Percepción Personal incluida</li>
+              <li class="yes">Taller personalizado (plan anual)</li>
+            </ul>
+            <a href="../index.html#contacto" class="btn btn-primary btn-block">Elegir Sublime</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Calculadora -->
+      <div class="tab-content plan-content" id="plan-calculadora">
+        <p class="plan-intro" data-aos="fade-up">Calcula el código perceptual de personas, proyectos, territorios y momentos. Consultas individuales o paquetes para uso profesional.</p>
+        <div class="pricing-grid pricing-4">
+          <div class="pricing-card" data-aos="fade-up">
+            <div class="pricing-header pricing-header-blue">EXPLORADOR</div>
+            <div class="pricing-price"><span class="price-monthly">$10 USD</span></div>
+            <div class="pricing-subtext">1 consulta</div>
+            <div class="pricing-validity">Válido por: 30 días</div>
+            <ul class="pricing-features">
+              <li class="yes">1 cálculo de código completo</li>
+              <li class="yes">Perfil perceptual básico</li>
+              <li class="yes">Descarga de resultados</li>
+            </ul>
+            <a href="../index.html#contacto" class="btn-ghost-gold btn-block">Comenzar</a>
+          </div>
+          <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-header pricing-header-blue">BUSCADOR <span class="save-badge">20% off</span></div>
+            <div class="pricing-price"><span class="price-monthly">$80 USD</span></div>
+            <div class="pricing-subtext">10 consultas</div>
+            <div class="pricing-validity">Válido por: 30 días</div>
+            <ul class="pricing-features">
+              <li class="yes">10 cálculos de código</li>
+              <li class="yes">Perfil perceptual completo</li>
+              <li class="yes">Uso personal y profesional</li>
+              <li class="yes">Historial de consultas</li>
+            </ul>
+            <a href="../index.html#contacto" class="btn-ghost-gold btn-block">Elegir Buscador</a>
+          </div>
+          <div class="pricing-card pricing-card-featured" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-header pricing-header-gold">INICIADO <span class="pop-badge">Popular</span></div>
+            <div class="pricing-price"><span class="price-monthly">$670 USD</span> <span class="save-badge">33% off</span></div>
+            <div class="pricing-subtext">100 consultas</div>
+            <div class="pricing-validity">Válido por: 3 meses</div>
+            <ul class="pricing-features">
+              <li class="yes">100 cálculos de código</li>
+              <li class="yes">Uso profesional y equipos</li>
+              <li class="yes">Todos los campos del perfil</li>
+              <li class="yes">Historial completo</li>
+              <li class="yes">Soporte prioritario</li>
+            </ul>
+            <a href="../index.html#contacto" class="btn btn-primary btn-block">Elegir Iniciado</a>
+          </div>
+          <div class="pricing-card pricing-card-recommended" data-aos="fade-up" data-aos-delay="300">
+            <div class="pricing-header pricing-header-deep">MAESTRO <span class="pop-badge">Recomendado</span></div>
+            <div class="pricing-price"><span class="price-monthly">$5,600 USD</span> <span class="save-badge">44% off</span></div>
+            <div class="pricing-subtext">1,000 consultas</div>
+            <div class="pricing-validity">Válido por: 1 año</div>
+            <ul class="pricing-features">
+              <li class="yes">1,000 cálculos de código</li>
+              <li class="yes">Uso empresarial e institucional</li>
+              <li class="yes">Todos los campos del perfil</li>
+              <li class="yes">Territorios, alianzas y vocación</li>
+              <li class="yes">Historial ilimitado</li>
+              <li class="yes">Soporte dedicado</li>
+              <li class="yes">Formación en interpretación</li>
+            </ul>
+            <a href="../index.html#contacto" class="btn btn-primary btn-block">Elegir Maestro</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 4: FAQ =================== -->
+  <section class="faq-section" id="faq">
+    <div class="faq-container">
+      <h2 data-aos="fade-up">Preguntas Frecuentes</h2>
+
+      <div class="faq-list" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Necesito conocimientos previos para usar la app?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>No. La app está diseñada para ser accesible a cualquier persona en cualquier punto de su camino. No requiere conocimiento previo del sistema ni de física cuántica. Cada día la guía se entrega en lenguaje claro, profundo y directamente aplicable.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué diferencia hay entre la Guía Diaria y la Calculadora?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>La Guía Diaria trabaja con el código del día — la combinación activa en ese momento del ciclo. La Calculadora trabaja con el código específico de cualquier entidad (persona, lugar, animal, proyecto) según su fecha de origen. Ambas herramientas se complementan: la Guía orienta cómo habitar el tiempo, la Calculadora revela la inteligencia específica de lo que calculas.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿El sistema es compatible con otras prácticas espirituales o terapéuticas?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Completamente. Arquitectura de Percepción no compite con ningún sistema de comprensión humana — los complementa desde un fundamento diferente. El sistema opera desde la física cuántica, no desde ninguna tradición espiritual específica, aunque dialoga con muchas de ellas porque sus descubrimientos son transculturales.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cuánto tiempo tarda en verse un cambio al usar el sistema?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>La primera experiencia de coherencia entre el código del día y la propia experiencia puede ocurrir desde el primer día. La transformación profunda de patrones es un proceso de espiral — cada vuelta abre un nivel más profundo. Los usuarios que habitan el sistema de manera consistente reportan cambios perceptibles en las primeras semanas en claridad mental, comprensión profunda, calidad emocional y toma de decisiones.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Los planes se pueden cambiar o cancelar?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Sí. Puedes comenzar con el plan Elemental sin compromiso y escalar cuando el campo lo requiera. Para cambios o consultas sobre tu plan, escríbenos a codigossublimes@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SECCIÓN 5: CTA FINAL =================== -->
+  <section class="app-cta-final" id="cta-final">
+    <div class="app-cta-container">
+      <h2 data-aos="fade-up">El Sistema Ya Está Activo.<br />El Campo Ya Está Disponible.</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Lo que cambia cuando comienzas no es el mundo — es la precisión con que lo percibes.</p>
+      <a href="#" class="btn btn-primary app-cta-btn" data-aos="fade-up" data-aos-delay="200">Acceder a la App</a> <!-- REEMPLAZAR CON URL REAL DE APP -->
+      <p class="app-cta-note" data-aos="fade-up" data-aos-delay="300">Planes desde $10 USD · www.codigossublimes.com</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Arquitectura de la Percepción<span class="tm">™</span></div>
+          <p class="footer-tagline">Un sistema vivo para habitar la realidad desde su mayor inteligencia disponible.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+            <a href="#" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#ecosistema">Ecosistema</a></li>
+            <li><a href="../index.html#app">App</a></li>
+            <li><a href="../index.html#inversion">Planes</a></li>
+            <li><a href="../index.html#trayectoria">Nosotros</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+            <li><a href="../index.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-cta-col">
+          <h4 class="footer-col-title">Comienza Ahora</h4>
+          <a href="../index.html#contacto" class="btn btn-primary">Descubre tu Código</a>
+          <p class="footer-cta-text">20 años de investigación respaldando cada código</p>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">© 2026 Arquitectura de Percepción · Experiencias Sublimes Internacional · www.codigossublimes.com</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/quantum-bg.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.parentElement;
+        var isOpen = item.classList.contains('active');
+        // Cerrar todos
+        document.querySelectorAll('.faq-item').forEach(function(fi) { fi.classList.remove('active'); });
+        // Abrir el clickeado si estaba cerrado
+        if (!isOpen) { item.classList.add('active'); }
+      });
+    });
+  </script>
+</body>
+</html>
