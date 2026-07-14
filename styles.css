@@ -2016,3 +2016,37 @@ body[data-theme="light"] .economia-highlight {
 body[data-theme="light"] .economia-highlight p {
   color: var(--color-cosmos);
 }
+
+/* === Footer social icons: tamaño consistente en todas las páginas === */
+/* (contacto.css ya define esto para index.html; esta regla asegura el mismo tamaño
+   en las páginas que no cargan contacto.css) */
+.footer-social {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  transition: background 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.footer-social a:hover {
+  background: var(--color-gold);
+  color: #050D1A;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
