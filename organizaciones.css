@@ -939,3 +939,71 @@ body[data-theme="light"] .cierre-cita {
 body[data-theme="light"] .cierre-texto {
   color: rgba(42, 42, 42, 0.6);
 }
+
+/* === FAQ Institucional === */
+.faq-institucional {
+  padding: 100px 24px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-institucional h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  padding: 20px 24px;
+  background: rgba(212, 175, 55, 0.03);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-gold);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  margin-left: 12px;
+  transition: transform 0.3s;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+body[data-theme="light"] .faq-item {
+  background: #FFFFFF;
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+body[data-theme="light"] .faq-item p {
+  color: rgba(42, 42, 42, 0.72);
+}
