@@ -2050,3 +2050,18 @@ body[data-theme="light"] .economia-highlight p {
   height: 18px;
   flex-shrink: 0;
 }
+
+/* === Resumen de planes en home (enlaza a app.html / inversion.html) === */
+.plans-summary-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .plans-summary-cards {
+    grid-template-columns: 1fr;
+  }
+}
