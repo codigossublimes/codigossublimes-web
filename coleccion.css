@@ -167,6 +167,60 @@
   letter-spacing: 0.02em;
 }
 
+/* === Muestra de pictogramas reales (5 obras + celda CTA) === */
+.galeria-grid-muestra {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.galeria-celda-foto {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: #050D1A;
+}
+
+.galeria-celda-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.galeria-foto-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 14px;
+  background: linear-gradient(to top, rgba(5, 13, 26, 0.85), transparent);
+  color: var(--color-gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.galeria-celda-cta {
+  text-decoration: none;
+  gap: 0.4rem;
+}
+
+.galeria-cta-num {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+/* Disuade la descarga casual por clic derecho / arrastre — no es una protección absoluta */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 /* =================== SECCIÓN 3: ADQUISICIÓN =================== */
 .adquisicion {
   background: #050D1A;
