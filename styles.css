@@ -91,9 +91,9 @@ ul {
    ============================================================ */
 .theme-toggle {
   position: fixed;
-  top: 22px;
+  top: calc(var(--nav-height) + 14px);
   right: 22px;
-  z-index: 1100;
+  z-index: 1050;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -158,8 +158,8 @@ body[data-theme="light"] .navbar.scrolled {
 /* Logo */
 .nav-logo {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.65rem;
+  font-weight: 700;
   color: var(--color-gold);
   letter-spacing: 0.02em;
   white-space: nowrap;
@@ -174,12 +174,12 @@ body[data-theme="light"] .navbar.scrolled {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.6rem;
 }
 
 .nav-links a {
@@ -1396,7 +1396,7 @@ body[data-theme="light"] .investment-note {
   }
 
   .nav-logo {
-    font-size: 1.05rem;
+    font-size: 1.25rem;
   }
 
   .hero {
@@ -1621,7 +1621,8 @@ body[data-theme="light"] #quantum-canvas {
 
 .problema-metrica-desc {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--color-white);
+  opacity: 0.55;
   font-weight: 300;
   line-height: 1.4;
 }
