@@ -121,19 +121,24 @@
 }
 
 .perfil-avatar {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background: #2C5F7F;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
-  font-size: 3.5rem;
-  font-weight: 600;
-  color: #FFFFFF;
+  overflow: hidden;
   margin: 0 auto 1.5rem;
-  border: 2px solid rgba(212, 175, 55, 0.3);
+  border: 3px solid var(--color-gold);
+  box-shadow: 0 4px 24px rgba(212, 175, 55, 0.2);
+}
+
+.perfil-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .perfil-name {
