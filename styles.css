@@ -2066,3 +2066,13 @@ body[data-theme="light"] .economia-highlight p {
     grid-template-columns: 1fr;
   }
 }
+
+/* Íconos de redes sociales pendientes de enlace real (temporal) */
+.social-soon {
+  opacity: 0.4;
+  cursor: default;
+  position: relative;
+}
+.social-soon:hover {
+  opacity: 0.6;
+}
