@@ -517,6 +517,21 @@ body[data-theme="light"] .caso-lista li {
   display: block;
 }
 
+/* Para fotos donde el recorte automático corta contexto importante
+   (ver caso-casa-tara sesión 1:1 y caso-antioquia): se fija la
+   proporción real de la imagen en vez de estirarla a la altura
+   del texto vecino, para que se vea completa y centrada. */
+.caso-foto.caso-foto-ajustada {
+  align-self: center;
+  min-height: 0;
+}
+
+.caso-foto.caso-foto-ajustada img {
+  height: auto;
+  object-fit: contain;
+  background: #0A1628;
+}
+
 .caso-foto-texto {
   padding: 32px;
   display: flex;
