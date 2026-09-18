@@ -5,6 +5,32 @@
 
 (function () {
   'use strict';
+     // Agrega "Terremoto App" al menú de navegación y al footer en todas las páginas
+  document.addEventListener('DOMContentLoaded', function () {
+    var navLinks = document.querySelector('.nav-links');
+    if (navLinks && !navLinks.querySelector('a[href="terremoto.html"]')) {
+      var li = document.createElement('li');
+      li.innerHTML = '<a href="terremoto.html">Terremoto App</a>';
+      var frutos = navLinks.querySelector('a[href="frutos.html"]');
+      if (frutos) {
+        frutos.parentElement.insertAdjacentElement('afterend', li);
+      } else {
+        navLinks.appendChild(li);
+      }
+    }
+
+    var footerLinks = document.querySelector('.footer-links');
+    if (footerLinks && !footerLinks.querySelector('a[href="terremoto.html"]')) {
+      var liFooter = document.createElement('li');
+      liFooter.innerHTML = '<a href="terremoto.html">Terremoto App</a>';
+      var frutosFooter = footerLinks.querySelector('a[href="frutos.html"]');
+      if (frutosFooter) {
+        frutosFooter.parentElement.insertAdjacentElement('afterend', liFooter);
+      } else {
+        footerLinks.appendChild(liFooter);
+      }
+    }
+  });
 
   // Detectar preferencia de movimiento reducido
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
