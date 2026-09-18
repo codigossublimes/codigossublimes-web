@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terremoto — Preparación ante desastres</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#132430;
+    --ink-soft:#3c5361;
+    --paper:#F6F3EC;
+    --paper-dim:#ece7da;
+    --signal:#E2A335;
+    --signal-deep:#B9791C;
+    --line:#12232f22;
+    --calm:#5C7A6E;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  a{color:inherit;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:26px 28px; max-width:1040px; margin:0 auto;
+  }
+  .brand{font-family:'Newsreader', serif; font-size:1.15rem; font-weight:600;}
+  .brand span{color:var(--signal-deep);}
+  nav a.cta{
+    background:var(--ink); color:var(--paper); text-decoration:none;
+    padding:10px 20px; border-radius:2px; font-size:0.9rem; font-weight:500;
+  }
+
+  /* ---------- HERO ---------- */
+  header.hero{padding:40px 0 70px;}
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;
+  }
+  .eyebrow{
+    font-size:0.85rem; color:var(--ink-soft); margin-bottom:18px; max-width:34ch;
+  }
+  h1.headline{
+    font-size:clamp(2.3rem, 4.6vw, 3.6rem);
+    line-height:1.06;
+    margin-bottom:24px;
+  }
+  .headline em{font-style:italic; color:var(--signal-deep);}
+  .lede{font-size:1.1rem; color:var(--ink-soft); max-width:46ch; margin-bottom:32px;}
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
+  .btn-primary{
+    background:var(--ink); color:var(--paper); text-decoration:none;
+    padding:14px 26px; border-radius:2px; font-weight:500; font-size:0.98rem;
+    display:inline-block;
+  }
+  .btn-secondary{
+    color:var(--ink); text-decoration:none; font-weight:500; font-size:0.95rem;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:2px;
+  }
+
+  /* seismograph */
+  .seismo-box{
+    background:var(--paper-dim); border-radius:4px; padding:28px 22px 22px;
+  }
+  .seismo-label{
+    font-size:0.78rem; color:var(--ink-soft); display:flex; justify-content:space-between;
+    margin-bottom:6px;
+  }
+  svg.wave{width:100%; height:auto; display:block;}
+  .wave path{
+    fill:none; stroke:var(--signal-deep); stroke-width:2; stroke-linecap:round;
+  }
+  .wave path.calm{stroke:var(--calm);}
+
+  /* ---------- QUE ES ---------- */
+  section.intro{padding:60px 0; border-top:1px solid var(--line);}
+  .intro-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px;}
+  .intro-grid h2{font-size:1.9rem; margin-bottom:18px;}
+  .intro-grid p{color:var(--ink-soft); font-size:1.02rem; max-width:52ch;}
+  .intro-grid p + p{margin-top:14px;}
+
+  /* ---------- FEATURES ---------- */
+  section.features{padding:60px 0; border-top:1px solid var(--line);}
+  section.features h2{font-size:1.9rem; margin-bottom:10px;}
+  .features-sub{color:var(--ink-soft); max-width:50ch; margin-bottom:40px;}
+  .feature-list{display:flex; flex-direction:column;}
+  .feature-row{
+    display:grid; grid-template-columns:220px 1fr; gap:28px;
+    padding:26px 0; border-top:1px solid var(--line);
+  }
+  .feature-row:last-child{border-bottom:1px solid var(--line);}
+  .feature-name{font-family:'Newsreader', serif; font-size:1.2rem;}
+  .feature-desc{color:var(--ink-soft); max-width:56ch;}
+  .tag-free{
+    display:inline-block; font-size:0.72rem; color:var(--calm);
+    border:1px solid var(--calm); border-radius:2px; padding:2px 8px; margin-top:8px;
+  }
+
+  /* ---------- HOW ---------- */
+  section.how{padding:60px 0; border-top:1px solid var(--line);}
+  section.how h2{font-size:1.9rem; margin-bottom:40px;}
+  .how-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:32px;}
+  .how-step .num{
+    font-family:'Newsreader', serif; font-style:italic; color:var(--signal-deep);
+    font-size:1.6rem; display:block; margin-bottom:10px;
+  }
+  .how-step h3{font-size:1.15rem; margin-bottom:8px; font-weight:500;}
+  .how-step p{color:var(--ink-soft); font-size:0.96rem;}
+
+  /* ---------- CTA ---------- */
+  section.closing{
+    padding:70px 0 90px; border-top:1px solid var(--line);
+  }
+  .closing-box{
+    background:var(--ink); color:var(--paper); border-radius:4px;
+    padding:52px 44px; display:grid; grid-template-columns:1.3fr 0.7fr; gap:32px; align-items:center;
+  }
+  .closing-box h2{color:var(--paper); font-size:1.8rem; margin-bottom:12px;}
+  .closing-box p{color:#cfd8dc; max-width:44ch;}
+  .closing-actions{display:flex; flex-direction:column; gap:12px; align-items:flex-start;}
+  .btn-on-dark{
+    background:var(--signal); color:var(--ink); text-decoration:none;
+    padding:14px 26px; border-radius:2px; font-weight:600; font-size:0.98rem;
+  }
+  .closing-note{font-size:0.82rem; color:#9fb0b8;}
+
+  footer{
+    padding:30px 0 50px; border-top:1px solid var(--line);
+    color:var(--ink-soft); font-size:0.85rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  @media (max-width:760px){
+    .hero-grid, .intro-grid, .feature-row, .how-grid, .closing-box{
+      grid-template-columns:1fr;
+    }
+    .closing-box{padding:36px 26px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">Terremoto<span>.</span></div>
+  <a class="cta" href="https://terremotoapp.com">Ir a la app</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Preparación ante desastres · Colombia y el mundo</p>
+      <h1 class="headline">Saber qué hacer <em>antes</em> de que tiemble, no mientras tiembla.</h1>
+      <p class="lede">Terremoto organiza en un solo lugar lo que normalmente está disperso: protocolos claros, avisos comunitarios y un botón de auxilio que de verdad llega a alguien. Gratis, para que la preparación no dependa de poder pagarla.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://terremotoapp.com">Abrir Terremoto</a>
+        <a class="btn-secondary" href="#que-incluye">Ver qué incluye</a>
+      </div>
+    </div>
+    <div class="seismo-box">
+      <div class="seismo-label"><span>Registro sísmico</span><span>Antes → Durante → Después</span></div>
+      <svg class="wave" viewBox="0 0 400 140" preserveAspectRatio="none">
+        <path class="calm" d="M0,70 L60,70 L64,55 L68,85 L72,40 L76,100 L80,20 L84,115 L88,70 L92,70 L400,70"></path>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <h2>Qué es</h2>
+    <div>
+      <p>Terremoto es una aplicación web de preparación comunitaria ante desastres. No reemplaza a las autoridades ni a los cuerpos de socorro — les ahorra tiempo a las personas en el momento en que más lo necesitan, dándoles acceso ordenado y gratuito a protocolos de acción y a una red de aviso entre vecinos.</p>
+      <p>Funciona sin necesidad de crear cuenta, se instala como cualquier app desde el navegador, y está pensada para seguir siendo útil incluso con conexión intermitente.</p>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="que-incluye">
+  <div class="wrap">
+    <h2>Qué incluye, gratis</h2>
+    <p class="features-sub">El plan gratuito no es una versión recortada de prueba — es el motor de crecimiento del proyecto y cubre lo esencial para cualquier persona, en cualquier lugar.</p>
+    <div class="feature-list">
+      <div class="feature-row">
+        <div class="feature-name">Detección de sismos</div>
+        <div>
+          <p class="feature-desc">Monitoreo en tiempo real de actividad sísmica a partir de fuentes oficiales internacionales (USGS y EMSC).</p>
+          <span class="tag-free">Incluido en el plan gratuito</span>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Reportes comunitarios</div>
+        <div>
+          <p class="feature-desc">Cualquier persona puede reportar lo que está viendo en su zona — daños, riesgos, necesidades — y esos reportes generan avisos a quienes están cerca.</p>
+          <span class="tag-free">Incluido en el plan gratuito</span>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Protocolos completos</div>
+        <div>
+          <p class="feature-desc">Antes, durante y después de cada fenómeno, redactados en lenguaje directo y accionable, no en jerga institucional.</p>
+          <span class="tag-free">Incluido en el plan gratuito</span>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-name">Contactos de emergencia y SOS</div>
+        <div>
+          <p class="feature-desc">Hasta dos contactos de confianza reciben un aviso automático con la ubicación de la persona con un solo toque, sin pasos adicionales que perder tiempo en un momento crítico.</p>
+          <span class="tag-free">Incluido en el plan gratuito</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2>Cómo funciona</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <span class="num">Uno</span>
+        <h3>Se instala y se usa sin fricción</h3>
+        <p>Abre terremotoapp.com desde el celular, instálala como app y empieza a usarla de inmediato — sin registro obligatorio.</p>
+      </div>
+      <div class="how-step">
+        <span class="num">Dos</span>
+        <h3>Recibe avisos de su zona</h3>
+        <p>Cuando hay un sismo detectado o un reporte comunitario cerca, la app avisa directamente, con el fenómeno correspondiente.</p>
+      </div>
+      <div class="how-step">
+        <span class="num">Tres</span>
+        <h3>Actúa con un protocolo claro</h3>
+        <p>El aviso lleva directo al protocolo correspondiente — qué hacer antes, durante y después — sin tener que buscarlo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="closing-box">
+      <div>
+        <h2>La preparación no debería ser un lujo.</h2>
+        <p>Terremoto existe para que cualquier persona, tenga o no con qué pagar, llegue a la información correcta en el momento correcto.</p>
+      </div>
+      <div class="closing-actions">
+        <a class="btn-on-dark" href="https://terremotoapp.com">Ir a terremotoapp.com</a>
+        <span class="closing-note">Disponible desde el navegador, sin descarga en tienda de apps.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <span>Terremoto — una herramienta de Código Sublimes</span>
+    <span>Colombia · en expansión hacia México</span>
+  </div>
+</footer>
+
+</body>
+</html>
