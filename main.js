@@ -5,8 +5,20 @@
 
 (function () {
   'use strict';
-     // Agrega "Terremoto App" al menú de navegación y al footer en todas las páginas
+     // Botón flotante de WhatsApp en todas las páginas
   document.addEventListener('DOMContentLoaded', function () {
+    if (!document.querySelector('.whatsapp-float')) {
+      var waLink = document.createElement('a');
+      waLink.className = 'whatsapp-float';
+      waLink.href = 'https://wa.me/524433997759?text=' + encodeURIComponent('Hola, me gustaría conocer más sobre Arquitectura de Percepción');
+      waLink.target = '_blank';
+      waLink.rel = 'noopener noreferrer';
+      waLink.setAttribute('aria-label', 'Escríbenos por WhatsApp');
+      waLink.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 4.99L2 22l5.25-1.38c1.45.79 3.08 1.21 4.78 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.68 2 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24zm-3.3 4.74c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.6.13.17 1.76 2.72 4.35 3.7 2.15.82 2.59.66 3.06.62.47-.04 1.5-.61 1.71-1.2.21-.59.21-1.1.15-1.2-.06-.1-.23-.17-.48-.29-.25-.13-1.5-.74-1.73-.82-.23-.08-.4-.13-.57.13-.17.25-.65.82-.8.99-.15.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.57-1.39-.79-1.9-.2-.5-.41-.43-.57-.44-.14-.01-.31-.01-.48-.01z"/></svg>';
+      document.body.appendChild(waLink);
+    }
+
+     // Agrega "Terremoto App" al menú de navegación y al footer en todas las páginas
     var navLinks = document.querySelector('.nav-links');
     if (navLinks && !navLinks.querySelector('a[href="terremoto.html"]')) {
       var li = document.createElement('li');

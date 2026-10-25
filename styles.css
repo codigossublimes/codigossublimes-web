@@ -23,7 +23,7 @@
 /* Tema claro (mármol) */
 body[data-theme="light"] {
   --color-cosmos: #F5F3EE;
-  --color-gold: #B8941F;
+  --color-gold: #7F6008;
   --color-white: #1a1a1a;
   --color-ether: #4A7A9A;
   --color-glass: rgba(184, 148, 31, 0.08);
@@ -38,6 +38,7 @@ body[data-theme="light"] {
 html {
   scroll-behavior: smooth;
   font-size: 19px;
+  overflow-x: hidden;
 }
 
 body {
@@ -119,6 +120,49 @@ body[data-theme="light"] .theme-toggle {
 .theme-toggle .icon-light { display: none; }
 body[data-theme="light"] .theme-toggle .icon-cosmos { display: none; }
 body[data-theme="light"] .theme-toggle .icon-light { display: block; }
+
+/* ============================================================
+   3b. BOTÓN FLOTANTE WHATSAPP
+   ============================================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 1060;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+  fill: #FFFFFF;
+}
+
+@media (max-width: 900px) {
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-float svg {
+    width: 26px;
+    height: 26px;
+  }
+}
 
 /* ============================================================
    4. NAVBAR
@@ -1396,7 +1440,16 @@ body[data-theme="light"] .investment-note {
   }
 
   .nav-logo {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
+    max-width: calc(100vw - 150px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .nav-toggle {
+    flex-shrink: 0;
   }
 
   .hero {
