@@ -368,7 +368,7 @@ body[data-theme="light"] .diplomado-hero {
 }
 
 body[data-theme="light"] .diplomado-hero h1 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .diplomado-hero-subtitle {
@@ -393,7 +393,7 @@ body[data-theme="light"] .modulo-card {
 }
 
 body[data-theme="light"] .modulo-card h3 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .modulo-card p {
@@ -440,7 +440,7 @@ body[data-theme="light"] .cta-final {
 }
 
 body[data-theme="light"] .cta-final h2 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .cta-final p {

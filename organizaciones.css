@@ -770,7 +770,7 @@ body[data-theme="light"] .org-hero {
 }
 
 body[data-theme="light"] .org-hero h1 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .org-hero-subtitle {
@@ -825,7 +825,7 @@ body[data-theme="light"] .acordeon-item {
 
 body[data-theme="light"] .acordeon-pregunta {
   background: #FFFFFF;
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .acordeon-pregunta:hover {
@@ -854,7 +854,7 @@ body[data-theme="light"] .alianza-card {
 }
 
 body[data-theme="light"] .alianza-card h3 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .alianza-card p {
@@ -875,7 +875,7 @@ body[data-theme="light"] .club-card {
 }
 
 body[data-theme="light"] .club-card h3 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .club-card p {
@@ -908,7 +908,7 @@ body[data-theme="light"] .roi-caja {
 }
 
 body[data-theme="light"] .roi-caja p {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .pasos {
@@ -933,7 +933,7 @@ body[data-theme="light"] .cierre-caja {
 }
 
 body[data-theme="light"] .cierre-cita {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .cierre-texto {

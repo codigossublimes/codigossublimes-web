@@ -1783,7 +1783,7 @@ body[data-theme="light"] .problema-col-solucion {
 }
 
 body[data-theme="light"] .problema-col-problema h3 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .problema-col p {
@@ -2046,7 +2046,7 @@ body[data-theme="light"] .economia-cuantica {
 }
 
 body[data-theme="light"] .economia-subtitle {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .economia-text {
@@ -2068,7 +2068,7 @@ body[data-theme="light"] .economia-highlight {
 }
 
 body[data-theme="light"] .economia-highlight p {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 /* === Footer social icons: tamaño consistente en todas las páginas === */
@@ -2128,4 +2128,76 @@ body[data-theme="light"] .economia-highlight p {
 }
 .social-soon:hover {
   opacity: 0.6;
+}
+
+/* ============================================================
+   AJUSTES DE CONTRASTE — TEMA CLARO (WCAG AA)
+   ============================================================ */
+body[data-theme="light"] .price-period { color: #4A5A68 !important; }
+body[data-theme="light"] .problema-badge-red { color: #9B4A4A !important; }
+body[data-theme="light"] .caso-italic,
+body[data-theme="light"] .personalizada-italic { color: var(--color-gold) !important; }
+body[data-theme="light"] .breadcrumb,
+body[data-theme="light"] .breadcrumb a { color: var(--color-gold) !important; }
+
+/* Menú de escritorio: evita que "Terremoto App" se parta en dos líneas */
+.nav-links a { white-space: nowrap; }
+
+/* Menú tipo hamburguesa también en escritorio (9 enlaces + botón no caben en una fila) */
+@media (min-width: 901px) {
+  .nav-toggle { display: flex; flex-shrink: 0; }
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 340px;
+    max-width: 80%;
+    height: 100vh;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+    background: rgba(10, 22, 40, 0.98);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 2rem;
+    transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    border-left: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  body[data-theme="light"] .nav-menu { background: rgba(245, 243, 238, 0.98); }
+  .nav-menu.active { right: 0; }
+  .nav-links { flex-direction: column; align-items: center; gap: 1.2rem; }
+  .nav-links a { font-size: 1.1rem; }
+  .btn-nav-special { font-size: 1rem; padding: 0.8rem 2rem; }
+}
+
+/* Panel del menú: empieza arriba y permite desplazarse (no corta "Ecosistema") */
+@media (max-width: 900px) { .nav-menu { justify-content: flex-start !important; padding-top: 100px !important; overflow-y: auto; gap: 1.6rem; } .nav-links { gap: 1.3rem; } }
+@media (min-width: 901px) { .nav-menu { justify-content: flex-start !important; padding-top: 110px !important; } }
+
+/* ============================================================
+   GALERÍA DE CAMPO (fotos reales por página)
+   ============================================================ */
+.galeria-campo { position: relative; z-index: 1; padding: 90px 2rem; }
+.gc-inner { max-width: 1100px; margin: 0 auto; }
+.gc-head { text-align: center; max-width: 720px; margin: 0 auto 2.6rem; }
+.gc-eyebrow { display: inline-block; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 0.9rem; }
+.gc-title { font-family: var(--font-heading); font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.25; color: var(--color-white); margin-bottom: 0.9rem; }
+.gc-intro { color: var(--color-white); opacity: 0.72; font-size: 0.98rem; line-height: 1.7; }
+.gc-grid { display: grid; gap: 18px; }
+.gc-trio { grid-template-columns: 1.6fr 1fr; grid-template-rows: 1fr 1fr; }
+.gc-trio .gc-fig:first-child { grid-row: 1 / span 2; }
+.gc-duo { grid-template-columns: 1fr 1fr; }
+.gc-solo { grid-template-columns: minmax(0, 860px); justify-content: center; }
+.gc-fig { margin: 0; display: flex; flex-direction: column; }
+.gc-frame { position: relative; overflow: hidden; border-radius: 14px; border: 1px solid rgba(212, 175, 55, 0.35); box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18); flex: 1; min-height: 190px; background: rgba(127, 127, 127, 0.12); }
+.gc-frame img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.gc-fig:hover .gc-frame img { transform: scale(1.035); }
+.gc-fig figcaption { margin-top: 0.6rem; font-size: 0.82rem; line-height: 1.5; color: var(--color-white); opacity: 0.68; font-style: italic; }
+.gc-duo .gc-frame, .gc-solo .gc-frame { aspect-ratio: 16 / 10; flex: none; }
+@media (max-width: 768px) {
+  .galeria-campo { padding: 60px 1.2rem; }
+  .gc-trio, .gc-duo { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .gc-trio .gc-fig:first-child { grid-row: auto; }
+  .gc-frame { aspect-ratio: 16 / 10; min-height: 0; flex: none; }
 }

@@ -377,7 +377,7 @@ body[data-theme="light"] .retiro-hero {
 }
 
 body[data-theme="light"] .retiro-hero h1 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .retiro-hero-subtitle {
@@ -406,7 +406,7 @@ body[data-theme="light"] .presencia-card {
 }
 
 body[data-theme="light"] .presencia-card h3 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .presencia-card p {
@@ -423,7 +423,7 @@ body[data-theme="light"] .inversion-box {
 }
 
 body[data-theme="light"] .inversion-price {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .inversion-alt {

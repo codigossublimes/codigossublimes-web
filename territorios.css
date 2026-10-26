@@ -393,7 +393,7 @@ body[data-theme="light"] .ter-hero {
 }
 
 body[data-theme="light"] .ter-hero h1 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .ter-hero-subtitle {
@@ -455,7 +455,7 @@ body[data-theme="light"] .cta-territorio {
 }
 
 body[data-theme="light"] .cta-territorio h2 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .cta-note {

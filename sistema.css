@@ -482,7 +482,7 @@ body[data-theme="light"] .sistema-hero {
 }
 
 body[data-theme="light"] .sistema-hero h1 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .sistema-hero-subtitle {
@@ -515,7 +515,7 @@ body[data-theme="light"] .descubrimiento {
 }
 
 body[data-theme="light"] .descubrimiento h2 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .descubrimiento p {
@@ -545,7 +545,7 @@ body[data-theme="light"] .arquitectura {
 }
 
 body[data-theme="light"] .arquitectura h2 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .arq-intro {
@@ -578,7 +578,7 @@ body[data-theme="light"] .cta-final {
 }
 
 body[data-theme="light"] .cta-final h2 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .cta-final p {

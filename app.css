@@ -343,7 +343,7 @@ body[data-theme="light"] .app-hero {
 }
 
 body[data-theme="light"] .app-hero h1 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .app-hero-subtitle {
@@ -364,7 +364,7 @@ body[data-theme="light"] .tool-card {
 }
 
 body[data-theme="light"] .tool-subtitle {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .tool-text {
@@ -393,7 +393,7 @@ body[data-theme="light"] .faq-section {
 
 body[data-theme="light"] .faq-question {
   background: #FFFFFF;
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .faq-question:hover {
@@ -413,7 +413,7 @@ body[data-theme="light"] .app-cta-final {
 }
 
 body[data-theme="light"] .app-cta-final h2 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .app-cta-final p {

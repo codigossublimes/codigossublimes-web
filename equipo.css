@@ -388,7 +388,7 @@ body[data-theme="light"] .equipo-hero {
 }
 
 body[data-theme="light"] .equipo-hero h1 {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .equipo-hero-subtitle {
@@ -413,7 +413,7 @@ body[data-theme="light"] .perfil-card {
 }
 
 body[data-theme="light"] .perfil-name {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .perfil-formacion li {
@@ -450,7 +450,7 @@ body[data-theme="light"] .sistema-creado-box {
 }
 
 body[data-theme="light"] .sistema-creado-quote {
-  color: var(--color-cosmos);
+  color: var(--color-white);
 }
 
 body[data-theme="light"] .sistema-creado-text {
