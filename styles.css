@@ -2201,3 +2201,22 @@ body[data-theme="light"] .breadcrumb a { color: var(--color-gold) !important; }
   .gc-trio .gc-fig:first-child { grid-row: auto; }
   .gc-frame { aspect-ratio: 16 / 10; min-height: 0; flex: none; }
 }
+
+/* Maestro Institucional (paquete con servicios) */
+.pricing-institucional { margin: 28px auto 0; max-width: 980px; padding: 28px 32px; border-radius: 16px; border: 1px solid var(--color-gold); background: rgba(212, 175, 55, 0.07); }
+body[data-theme="light"] .pricing-institucional { background: rgba(127, 96, 8, 0.06); }
+.pi-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 1.6rem; margin-bottom: 1rem; }
+.pi-tag { font-size: 0.8rem; letter-spacing: 0.18em; color: var(--color-gold); font-weight: 600; }
+.pi-price { font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-gold); }
+.pi-sub { font-family: var(--font-body); font-size: 0.85rem; color: var(--color-white); opacity: 0.7; margin-left: 0.4rem; }
+.pi-features { columns: 2; column-gap: 2rem; margin: 0.4rem 0 1rem; }
+.pi-features li { break-inside: avoid; }
+.pi-note { font-size: 0.85rem; color: var(--color-white); opacity: 0.75; }
+.pi-note a { color: var(--color-gold); font-weight: 600; text-decoration: underline; }
+@media (max-width: 768px) { .pricing-institucional { padding: 22px 18px; } .pi-features { columns: 1; } }
+
+/* Encabezados oscuros de precios: texto claro y legible en ambos temas */
+.pricing-header-deep, body[data-theme="light"] .pricing-header-deep { color: #E8C75A !important; }
+.pricing-header-deep .pop-badge { color: #E8C75A; border-color: rgba(232, 199, 90, 0.6); }
+.pi-sub { display: block; margin-left: 0; margin-top: 0.2rem; }
+@media (min-width: 769px) { .pi-sub { display: inline; margin-left: 0.4rem; } }
